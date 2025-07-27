@@ -1,0 +1,87 @@
+{
+  "itemClass": [
+    {
+      "id": "baseItem",
+      "replaceVars": true,
+      "dropTexturePack": "fbttle",
+      "inventoryTexturePack": "itemIcons",
+      "inventoryTextureIndex": 43,
+      "name": "Item",
+      "type": "Item",
+      "outline": "|outlineItem|",
+      "outlineIgnore": "0x000000",
+      "defaults": {
+        "identified": true
+      },
+      "formulas": {
+        "price": "1 :max ((basePrice + (charges * spell.p)) * (identified * (pricePrefix2 + priceSuffix2 :neg (1 / (pricePrefix2 + priceSuffix2))) :nvl 1) + (identified * (pricePrefix1 + priceSuffix1)))",
+        "repairCost": ":floor(0.5 - ((identified * magical) :nvl (identified * unique) * 0.35) * price * (:trunc(1 - (durability / durabilityMax) * 100) * 0.01)) :nvl 1"
+      },
+      "inventorySize": [1, 1],
+      "anchorOffset": [0, -36],
+      "actions": {
+        "action": "pickItemInLevel",
+        "inventoryPick": "pickItemInInventory",
+        "levelPick": "clearPanelText"
+      }
+    },
+    {
+      "id": "baseArmor",
+      "fromId": "baseItem",
+      "dropTexturePack": "larmor",
+      "inventoryTexturePack": "itemIcons",
+      "inventoryTextureIndex": 161,
+      "name": "Armor",
+      "type": "Armor",
+      "defaults": {
+        "magical": false
+      },
+      "descriptions": [
+        { "index": 0, "name": "armor" },
+        { "index": 1, "name": "magic" },
+        { "index": 2, "name": "magic", "skip": 1 },
+        { "index": 3, "name": "required" }
+      ],
+      "inventorySize": [2, 3],
+      "actions": {
+        "levelDrop": { "name": "sound.play", "id": "fliplarm" },
+        "inventoryDrop": { "name": "sound.play", "id": "invlarm" }
+      },
+      "prefix": "armorPrefixes",
+      "pricePrefix1": "armorPrefixesB",
+      "pricePrefix2": "armorPrefixesM",
+      "suffix": "armorSuffixes",
+      "priceSuffix1": "armorSuffixesB",
+      "priceSuffix2": "armorSuffixesM"
+    },
+    {
+      "id": "baseWeapon",
+      "fromId": "baseItem",
+      "dropTexturePack": "swrdflip",
+      "inventoryTexturePack": "itemIcons",
+      "inventoryTextureIndex": 75,
+      "name": "Weapon",
+      "type": "Weapon",
+      "defaults": {
+        "magical": false
+      },
+      "descriptions": [
+        { "index": 0, "name": "weapon" },
+        { "index": 1, "name": "magic" },
+        { "index": 2, "name": "magic", "skip": 1 },
+        { "index": 3, "name": "required" }
+      ],
+      "inventorySize": [1, 3],
+      "actions": {
+        "levelDrop": { "name": "sound.play", "id": "flipswor" },
+        "inventoryDrop": { "name": "sound.play", "id": "invsword" }
+      },
+      "prefix": "weaponPrefixes",
+      "pricePrefix1": "weaponPrefixesB",
+      "pricePrefix2": "weaponPrefixesM",
+      "suffix": "weaponSuffixes",
+      "priceSuffix1": "weaponSuffixesB",
+      "priceSuffix2": "weaponSuffixesM"
+    }
+  ]
+}

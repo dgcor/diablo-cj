@@ -1,0 +1,10 @@
+{
+  "load.lang": "lang/%lang%/town.json",
+  "load.map": "level/default/d2/act1/town.json",
+  "load.actions": "res/towners/actions.json",
+  "load.objects": "level/map/town/levelObjects.json",
+  "load.players": "level/map/town/players.json",
+  "load.level2": "level/map/town/level2.json",
+  "load.passages": "level/map/town/levelPassages.json",
+  "load.update": "level/map/town/updateLevel.json"
+}

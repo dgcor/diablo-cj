@@ -1,0 +1,25 @@
+{
+  "itemClass": [
+    {
+      "id": "gold",
+      "fromId": "baseItem",
+      "dropTexturePack": "goldflip",
+      "inventoryTexturePack": "itemIcons",
+      "inventoryTextureIndex": 17,
+      "inventoryTexture": "goldTexture",
+      "name": "Gold",
+      "shortName": "Gold",
+      "type": "Gold",
+      "defaults": {
+        "quantity": 1,
+        "capacity": 5000
+      },
+      "actions": {
+        "levelDrop": { "name": "sound.play", "id": "gold" },
+        "inventoryDrop": { "name": "sound.play", "id": "gold" }
+      },
+      "prefix": "goldPrefix",
+      "suffix": "goldSuffix"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "itemClass": [
+    {
+      "id": "shortBow",
+      "fromId": "baseWeapon",
+      "dropTexturePack": "bow",
+      "inventoryTextureIndex": 129,
+      "name": "Short Bow",
+      "shortName": "Bow",
+      "type": "Bow",
+      "defaults": {
+        "basePrice": 100,
+        "damageMin": 1,
+        "damageMax": 4,
+        "durability": 30,
+        "durabilityMax": 30
+      },
+      "descriptions": { "index": 3, "name": "requiredStrDex" },
+      "inventorySize": [2, 3],
+      "actions": {
+        "levelDrop": { "name": "sound.play", "id": "flipbow" },
+        "inventoryDrop": { "name": "sound.play", "id": "invbow" }
+      }
+    },
+    {
+      "id": "longBow",
+      "fromId": "shortBow",
+      "inventoryTextureIndex": 113,
+      "name": "Long Bow",
+      "defaults": {
+        "basePrice": 250,
+        "damageMin": 1,
+        "damageMax": 6,
+        "durability": 35,
+        "durabilityMax": 35,
+        "requiredStrength": 25,
+        "requiredDexterity": 30
+      }
+    },
+    {
+      "id": "huntersBow",
+      "fromId": "shortBow",
+      "inventoryTextureIndex": 113,
+      "name": "Hunter's Bow",
+      "defaults": {
+        "basePrice": 350,
+        "damageMin": 2,
+        "damageMax": 5,
+        "durability": 40,
+        "durabilityMax": 40,
+        "requiredStrength": 20,
+        "requiredDexterity": 35
+      }
+    },
+    {
+      "id": "compositeBow",
+      "fromId": "shortBow",
+      "inventoryTextureIndex": 144,
+      "name": "Composite Bow",
+      "defaults": {
+        "basePrice": 600,
+        "damageMin": 3,
+        "damageMax": 6,
+        "durability": 45,
+        "durabilityMax": 45,
+        "requiredStrength": 25,
+        "requiredDexterity": 40
+      }
+    },
+    {
+      "id": "shortBattleBow",
+      "fromId": "shortBow",
+      "inventoryTextureIndex": 178,
+      "name": "Short Battle Bow",
+      "defaults": {
+        "basePrice": 750,
+        "damageMin": 3,
+        "damageMax": 7,
+        "durability": 45,
+        "durabilityMax": 45,
+        "requiredStrength": 30,
+        "requiredDexterity": 50
+      }
+    },
+    {
+      "id": "longBattleBow",
+      "fromId": "shortBow",
+      "inventoryTextureIndex": 130,
+      "name": "Long Battle Bow",
+      "defaults": {
+        "basePrice": 1000,
+        "damageMin": 1,
+        "damageMax": 10,
+        "durability": 50,
+        "durabilityMax": 50,
+        "requiredStrength": 30,
+        "requiredDexterity": 60
+      }
+    },
+    {
+      "id": "shortWarBow",
+      "fromId": "shortBow",
+      "inventoryTextureIndex": 176,
+      "name": "Short War Bow",
+      "defaults": {
+        "basePrice": 1500,
+        "damageMin": 4,
+        "damageMax": 8,
+        "durability": 55,
+        "durabilityMax": 55,
+        "requiredStrength": 35,
+        "requiredDexterity": 70
+      }
+    },
+    {
+      "id": "longWarBow",
+      "fromId": "shortBow",
+      "inventoryTextureIndex": 130,
+      "name": "Long War Bow",
+      "defaults": {
+        "basePrice": 2000,
+        "damageMin": 1,
+        "damageMax": 14,
+        "durability": 60,
+        "durabilityMax": 60,
+        "requiredStrength": 45,
+        "requiredDexterity": 80
+      }
+    }
+  ]
+}

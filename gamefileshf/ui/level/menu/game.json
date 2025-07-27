@@ -1,0 +1,115 @@
+{
+  "action": [
+    "closeMsgBox",
+    { "name": "resource.add", "id": "gameMenu" }
+  ],
+  "replaceVars": true,
+  "button": [
+    {
+      "id": "saveGame",
+      "font": "bigtgold",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "text": "|str_saveGame|",
+      "position": [321, 116],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 2,
+      "onClick": [
+        "menu.saveAndCloseAction",
+        { "name": "text.setText", "id": "msgBoxText", "text": "|str_saving|" },
+        "showMsgBox",
+        { "name": "load", "file": "level/saveGame.json" },
+        "closeMsgBox"
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "options",
+      "font": "bigtgold",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "text": "|str_options|",
+      "position": [321, 161],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 2,
+      "onClick": [
+        { "name": "resource.pop" },
+        { "name": "load", "file": "ui/level/menu/game2.json" }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "newGame",
+      "font": "bigtgold",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "text": "|str_newGame|",
+      "position": [321, 206],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 2,
+      "onClick": { "name": "load", "file": "ui/level/newGame.json" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "loadGame",
+      "font": "bigtgold",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "text": "|str_loadGame|",
+      "position": [320, 251],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 2,
+      "onClick": [
+        "menu.saveAndCloseAction",
+        { "name": "load", "file": "level/loadCurrentSave.json" }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "quitGame",
+      "font": "bigtgold",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "text": "|str_quitGame|",
+      "position": [320, 296],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 2,
+      "onClick": [
+        {
+          "name": "game.fadeOut",
+          "action": "saveSettingsAndClose"
+        }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    }
+  ],
+  "action.update": [
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

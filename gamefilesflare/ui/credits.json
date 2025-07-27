@@ -1,0 +1,133 @@
+{
+  "action": {
+    "name": "resource.add",
+    "id": "credits",
+    "ignorePrevious": true
+  },
+  "inputEvent": [
+    {
+      "gameInputEvent": "esc",
+      "action": { "name": "button.click", "id": "back" }
+    },
+    {
+      "gameInputEvent": "enter",
+      "action": { "name": "scrollable.setSpeed", "id": "creditsScroll", "speed": 5 }
+    },
+    {
+      "gameInputEvent": "enterKeyUp",
+      "action": { "name": "scrollable.setSpeed", "id": "creditsScroll", "speed": 35 }
+    }
+  ],
+  "texture": [
+    {
+      "id": "button_x",
+      "file": "images/menus/buttons/button_x.png"
+    },
+    {
+      "id": "credits_fantasycore",
+      "file": "images/menus/credits_fantasycore.png"
+    }
+  ],
+  "texturePack": {
+    "id": "button_x",
+    "texture": "button_x",
+    "frames": 4
+  },
+  "font": {
+    "id": "liberationSerif",
+    "file": "res/LiberationSerif-Regular.ttf"
+  },
+  "panel": {
+    "id": "creditsPanel"
+  },
+  "image": [
+    {
+      "id": "credits_logo",
+      "panel": "creditsPanel",
+      "texture": "logo",
+      "position": ["center", 0]
+    },
+    {
+      "id": "credits_fantasycore",
+      "panel": "creditsPanel",
+      "texture": "credits_fantasycore",
+      "position": ["center", 658]
+    }
+  ],
+  "text": {
+    "id": "creditsText",
+    "panel": "creditsPanel",
+    "font": "liberationSerif",
+    "fontSize": 16,
+    "file": "ui/credits.txt",
+    "position": [30, 120]
+  },
+  "scrollable": {
+    "id": "creditsScroll",
+    "drawable": "creditsPanel",
+    "refresh": 35,
+    "anchor": "none",
+    "position": [0, 25],
+    "size": [610, 430],
+    "offset": -220,
+    "onComplete": {
+      "name": "game.fadeOut",
+      "action": [
+        {
+          "name": "resource.pop",
+          "ignorePrevious": false
+        },
+        {
+          "name": "game.fadeIn"
+        }
+      ]
+    }
+  },
+  "button": [
+    {
+      "id": "speed",
+      "texture": "empty",
+      "textureRect": [640, 480],
+      "resizable": true,
+      "anchor": "all",
+      "onClickIn": { "name": "scrollable.setSpeed", "id": "creditsScroll", "speed": 5 },
+      "onClickOut": { "name": "scrollable.setSpeed", "id": "creditsScroll", "speed": 35 }
+    },
+    {
+      "id": "back",
+      "texturePack": "button_x",
+      "frame": 0,
+      "position": [604, 12],
+      "anchor": ["top", "right"],
+      "captureInputEvents": true,
+      "clickUp": true,
+      "onClick": {
+        "name": "game.fadeOut",
+        "action": [
+          {
+            "name": "resource.pop",
+            "ignorePrevious": false
+          },
+          {
+            "name": "game.fadeIn"
+          }
+        ]
+      },
+      "onClickIn": {
+        "name": "image.setTexture",
+        "id": "back",
+        "texturePack": "button_x",
+        "index": 1
+      },
+      "onClickOut": {
+        "name": "image.setTexture",
+        "id": "back",
+        "texturePack": "button_x",
+        "index": 0
+      }
+    }
+  ],
+  "action": {
+    "name": "game.fadeIn"
+  }
+}

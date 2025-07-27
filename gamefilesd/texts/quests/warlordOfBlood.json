@@ -1,0 +1,9 @@
+{
+  "load": [
+    "ui/level/showText.json",
+    "questText",
+    "50",
+    "lang/%lang%/texts/quests/warlordOfBlood.txt"
+  ],
+  "load": ["res/player/sound/load.json", 12, "", "playAudio", ""]
+}

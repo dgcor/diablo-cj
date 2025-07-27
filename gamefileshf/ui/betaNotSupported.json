@@ -1,0 +1,37 @@
+{
+  "inputEvent": {
+    "gameInputEvent": ["enter", "esc"],
+    "action": { "name": "game.close" }
+  },
+  "font": {
+    "id": "liberationSerif",
+    "file": "res/LiberationSerif-Regular.ttf"
+  },
+  "replaceVars": true,
+  "button": [
+    {
+      "id": "quit",
+      "font": "liberationSerif",
+      "fontSize": 28,
+      "color": "0xFFFFFF",
+      "position": [320, 240],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "text": "|str_betaNotSupported|",
+      "onClick": { "name": "game.close" }
+    },
+    {
+      "id": "diablo",
+      "font": "liberationSerif",
+      "fontSize": 28,
+      "color": "0xAA0000",
+      "position": [320, 340],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "text": "|str_playDiablo|",
+      "onClick": { "name": "game.load", "file": "gamefilesd" }
+    }
+  ]
+}

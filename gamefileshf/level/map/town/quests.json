@@ -1,0 +1,19 @@
+{
+  "quest": [
+    {
+      "id": "ogdenInit"
+    },
+    {
+      "id": "theButcher",
+      "name": "The Butcher"
+    },
+    {
+      "id": "farmersOrchard",
+      "name": "Farmer's Orchard"
+    },
+    {
+      "id": "graveMatters",
+      "name": "Grave Matters"
+    }
+  ]
+}

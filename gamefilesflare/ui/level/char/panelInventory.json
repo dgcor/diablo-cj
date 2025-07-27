@@ -1,0 +1,466 @@
+{
+  "panel": {
+    "id": "invPanel",
+    "position": [320, 0],
+    "visible": false
+  },
+  "button": [
+    {
+      "id": "invPanelBk",
+      "panel": "invPanel",
+      "texture": "inventory",
+      "textureRect": [0, 0, 320, 352],
+      "anchor": "right",
+      "position": [320, 0],
+      "captureInputEvents": true,
+      "onHoverEnter": "clearLevelHoverActions",
+      "onHoverLeave": "setLevelHoverActions",
+      "onRightClick": "rightClickLevel"
+    },
+    {
+      "id": "invPanelBk2",
+      "panel": "invPanel",
+      "texture": "character",
+      "textureRect": [0, 0, 26, 26],
+      "anchor": "right",
+      "position": [320, 0],
+      "captureInputEvents": true,
+      "onHoverEnter": "clearLevelHoverActions",
+      "onHoverLeave": "setLevelHoverActions",
+      "onRightClick": "rightClickLevel"
+    },
+    {
+      "id": "invPanelBk3",
+      "panel": "invPanel",
+      "texture": "inventory",
+      "textureRect": [0, 414, 320, 2],
+      "anchor": "right",
+      "position": [320, 351],
+      "captureInputEvents": true,
+      "onHoverEnter": "clearLevelHoverActions",
+      "onHoverLeave": "setLevelHoverActions",
+      "onRightClick": "rightClickLevel"
+    },
+    {
+      "id": "playerLeftHand",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [416, 112],
+      "onClick": "updateLeftHandClick",
+      "onHoverEnter": "updateLeftHandText",
+      "onHoverLeave": "hoverLeftHandLeave"
+    },
+    {
+      "id": "playerRightHand",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [512, 112],
+      "onClick": "updateRightHandClick",
+      "onHoverEnter": "updateRightHandText",
+      "onHoverLeave": "hoverRightHandLeave"
+    },
+    {
+      "id": "playerArmor",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [464, 80],
+      "onClick": "updateArmorClick",
+      "onHoverEnter": "updateArmorText",
+      "onHoverLeave": "hoverArmorLeave"
+    },
+    {
+      "id": "playerHelmet",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [464, 32],
+      "onClick": "updateHelmetClick",
+      "onHoverEnter": "updateHelmetText",
+      "onHoverLeave": "hoverHelmetLeave"
+    },
+    {
+      "id": "playerAmulet",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [512, 64],
+      "onClick": "updateAmuletClick",
+      "onHoverEnter": "updateAmuletText",
+      "onHoverLeave": "hoverAmuletLeave"
+    },
+    {
+      "id": "playerLeftRing",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [416, 160],
+      "onClick": "updateLeftRingClick",
+      "onHoverEnter": "updateLeftRingText",
+      "onHoverLeave": "hoverLeftRingLeave"
+    },
+    {
+      "id": "playerRightRing",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [512, 160],
+      "onClick": "updateRightRingClick",
+      "onHoverEnter": "updateRightRingText",
+      "onHoverLeave": "hoverRightRingLeave"
+    },
+    {
+      "id": "btnStash",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [256, 128],
+      "anchor": "right",
+      "position": [352, 224],
+      "onClick": "btnStashClick"
+    }
+  ],
+  "image": [
+    {
+      "id": "imgLeftHand",
+      "replaceVars": true,
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "outline": "|outlineItemInv|",
+      "outlineIgnore": "0x000000",
+      "anchor": "right",
+      "position": [337, 77]
+    },
+    {
+      "id": "imgRightHand",
+      "replaceVars": true,
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "outline": "|outlineItemInv|",
+      "outlineIgnore": "0x000000",
+      "anchor": "right",
+      "position": [569, 77]
+    },
+    {
+      "id": "imgArmor",
+      "replaceVars": true,
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "outline": "|outlineItemInv|",
+      "outlineIgnore": "0x000000",
+      "anchor": "right",
+      "position": [453, 77]
+    },
+    {
+      "id": "imgHelmet",
+      "replaceVars": true,
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "outline": "|outlineItemInv|",
+      "outlineIgnore": "0x000000",
+      "anchor": "right",
+      "position": [453, -10]
+    },
+    {
+      "id": "imgAmulet",
+      "replaceVars": true,
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "outline": "|outlineItemInv|",
+      "outlineIgnore": "0x000000",
+      "anchor": "right",
+      "position": [511, 5]
+    },
+    {
+      "id": "imgLeftRing",
+      "replaceVars": true,
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "outline": "|outlineItemInv|",
+      "outlineIgnore": "0x000000",
+      "anchor": "right",
+      "position": [354, 150]
+    },
+    {
+      "id": "imgRightRing",
+      "replaceVars": true,
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "outline": "|outlineItemInv|",
+      "outlineIgnore": "0x000000",
+      "anchor": "right",
+      "position": [555, 150]
+    },
+    {
+      "id": "imgBkStash11",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [352, 224]
+    },
+    {
+      "id": "imgBkStash12",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [352, 256]
+    },
+    {
+      "id": "imgBkStash13",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [352, 288]
+    },
+    {
+      "id": "imgBkStash14",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [352, 320]
+    },
+    {
+      "id": "imgBkStash21",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [384, 224]
+    },
+    {
+      "id": "imgBkStash22",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [384, 256]
+    },
+    {
+      "id": "imgBkStash23",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [384, 288]
+    },
+    {
+      "id": "imgBkStash24",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [384, 320]
+    },
+    {
+      "id": "imgBkStash31",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [416, 224]
+    },
+    {
+      "id": "imgBkStash32",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [416, 256]
+    },
+    {
+      "id": "imgBkStash33",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [416, 288]
+    },
+    {
+      "id": "imgBkStash34",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [416, 320]
+    },
+    {
+      "id": "imgBkStash41",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [448, 224]
+    },
+    {
+      "id": "imgBkStash42",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [448, 256]
+    },
+    {
+      "id": "imgBkStash43",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [448, 288]
+    },
+    {
+      "id": "imgBkStash44",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [448, 320]
+    },
+    {
+      "id": "imgBkStash51",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [480, 224]
+    },
+    {
+      "id": "imgBkStash52",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [480, 256]
+    },
+    {
+      "id": "imgBkStash53",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [480, 288]
+    },
+    {
+      "id": "imgBkStash54",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [480, 320]
+    },
+    {
+      "id": "imgBkStash61",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [512, 224]
+    },
+    {
+      "id": "imgBkStash62",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [512, 256]
+    },
+    {
+      "id": "imgBkStash63",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [512, 288]
+    },
+    {
+      "id": "imgBkStash64",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [512, 320]
+    },
+    {
+      "id": "imgBkStash71",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [544, 224]
+    },
+    {
+      "id": "imgBkStash72",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [544, 256]
+    },
+    {
+      "id": "imgBkStash73",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [544, 288]
+    },
+    {
+      "id": "imgBkStash74",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [544, 320]
+    },
+    {
+      "id": "imgBkStash81",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [576, 224]
+    },
+    {
+      "id": "imgBkStash82",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [576, 256]
+    },
+    {
+      "id": "imgBkStash83",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [576, 288]
+    },
+    {
+      "id": "imgBkStash84",
+      "panel": "invPanel",
+      "texture": "empty",
+      "textureRect": [32, 32],
+      "anchor": "right",
+      "position": [576, 320]
+    }
+  ]
+}

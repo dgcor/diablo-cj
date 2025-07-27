@@ -1,0 +1,81 @@
+{
+  "texture": [
+    {
+      "id": "smaltext",
+      "file": "ctrlpan/smaltext.cel",
+      "indexed": true,
+      "charMapFile": "res/level/smaltextCharMap.bin"
+    },
+    {
+      "id": "medtexts",
+      "file": "data/medtexts.cel",
+      "indexed": true,
+      "charMapFile": "res/level/medtextsCharMap.bin"
+    },
+    {
+      "id": "bigtgold",
+      "file": "data/bigtgold.cel",
+      "indexed": true,
+      "charMapFile": "res/level/bigtgoldCharMap.bin"
+    }
+  ],
+  "texturePack": [
+    {
+      "id": "smaltext",
+      "type": "font",
+      "texture": "smaltext",
+      "palette": "town",
+      "charSizeFile": "res/level/smaltextSize.bin"
+    },
+    {
+      "id": "medtexts",
+      "type": "font",
+      "texture": "medtexts",
+      "palette": "town",
+      "charSizeFile": "res/level/medtextsSize.bin"
+    },
+    {
+      "id": "bigtgold",
+      "type": "font",
+      "texture": "bigtgold",
+      "palette": "town",
+      "charSizeFile": "res/level/bigtgoldSize.bin"
+    }
+  ],
+  "font": [
+    {
+      "id": "smaltext",
+      "texturePack": "smaltext",
+      "fontPalette": "town"
+    },
+    {
+      "id": "smaltextBlue",
+      "replaceVars": true,
+      "texturePack": "smaltext",
+      "fontPalette": "textBlue",
+      "fontColor": "|textBlue|"
+    },
+    {
+      "id": "smaltextGold",
+      "replaceVars": true,
+      "texturePack": "smaltext",
+      "fontPalette": "textGold",
+      "fontColor": "|textGold|"
+    },
+    {
+      "id": "smaltextRed",
+      "replaceVars": true,
+      "texturePack": "smaltext",
+      "fontPalette": "textRed",
+      "fontColor": "|textRed|"
+    },
+    {
+      "id": "medtexts",
+      "texturePack": "medtexts"
+    },
+    {
+      "id": "bigtgold",
+      "texturePack": "bigtgold"
+    }
+  ]
+}

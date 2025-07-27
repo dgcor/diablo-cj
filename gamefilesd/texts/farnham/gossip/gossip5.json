@@ -1,0 +1,13 @@
+{
+  "load": [
+    "ui/level/showText.json",
+    "questText",
+    "25",
+    "lang/%lang%/texts/farnham/gossip/gossip5.txt"
+  ],
+  "audio": {
+    "file": "sfx/Towners/drunk28.wav",
+    "play": true,
+    "volume": "%game.soundVolume%"
+  }
+}

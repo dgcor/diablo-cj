@@ -1,0 +1,96 @@
+{
+  "itemClass": [
+    {
+      "id": "smallAxe",
+      "fromId": "baseWeapon",
+      "dropTexturePack": "axe",
+      "inventoryTextureIndex": 123,
+      "name": "Small Axe",
+      "shortName": "Axe",
+      "type": "Axe",
+      "defaults": {
+        "basePrice": 150,
+        "twoHanded": true,
+        "damageMin": 2,
+        "damageMax": 10,
+        "durability": 24,
+        "durabilityMax": 24
+      },
+      "inventorySize": [2, 3],
+      "actions": {
+        "levelDrop": { "name": "sound.play", "id": "flipaxe" },
+        "inventoryDrop": { "name": "sound.play", "id": "invaxe" }
+      }
+    },
+    {
+      "id": "axe",
+      "fromId": "smallAxe",
+      "inventoryTextureIndex": 155,
+      "name": "Axe",
+      "defaults": {
+        "basePrice": 450,
+        "damageMin": 4,
+        "damageMax": 12,
+        "durability": 32,
+        "durabilityMax": 32,
+        "requiredStrength": 22
+      }
+    },
+    {
+      "id": "largeAxe",
+      "fromId": "smallAxe",
+      "inventoryTextureIndex": 153,
+      "name": "Large Axe",
+      "defaults": {
+        "basePrice": 750,
+        "damageMin": 6,
+        "damageMax": 16,
+        "durability": 40,
+        "durabilityMax": 40,
+        "requiredStrength": 30
+      }
+    },
+    {
+      "id": "broadAxe",
+      "fromId": "smallAxe",
+      "inventoryTextureIndex": 152,
+      "name": "Broad Axe",
+      "defaults": {
+        "basePrice": 1000,
+        "damageMin": 8,
+        "damageMax": 20,
+        "durability": 50,
+        "durabilityMax": 50,
+        "requiredStrength": 50
+      }
+    },
+    {
+      "id": "battleAxe",
+      "fromId": "smallAxe",
+      "inventoryTextureIndex": 112,
+      "name": "Battle Axe",
+      "defaults": {
+        "basePrice": 1500,
+        "damageMin": 10,
+        "damageMax": 25,
+        "durability": 60,
+        "durabilityMax": 60,
+        "requiredStrength": 65
+      }
+    },
+    {
+      "id": "greatAxe",
+      "fromId": "smallAxe",
+      "inventoryTextureIndex": 154,
+      "name": "Great Axe",
+      "defaults": {
+        "basePrice": 2500,
+        "damageMin": 12,
+        "damageMax": 30,
+        "durability": 75,
+        "durabilityMax": 75,
+        "requiredStrength": 80
+      }
+    }
+  ]
+}

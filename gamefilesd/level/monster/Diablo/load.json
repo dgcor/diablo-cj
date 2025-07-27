@@ -1,0 +1,4 @@
+{
+  "load": "level/monster/Diablo/textures.json",
+  "load": "level/monster/Diablo/class.json"
+}

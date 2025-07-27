@@ -1,0 +1,30 @@
+{
+  "game": {
+    "title" : "Diablo Flare",
+    "version": "0.1",
+    "saveDir": ".diabloflare",
+    "refSize": [640, 480],
+    "minSize": [640, 480],
+    "size": [640, 480],
+    "maxHeight": 600,
+    "frameRate": 60,
+    "keepAR": true,
+    "stretchToFit": false,
+    "smoothScreen": true,
+    "load": "settings.json",
+    "init": true
+  },
+  "mountFile": [
+    { "file": "gamefilesd" },
+    { "file": "empyrean_campaign" },
+    { "file": "fantasycore" }
+  ],
+  "load": "lang/load.json",
+  "action": {
+    "name": "if.equal",
+    "param1": { "name": "file.exists", "file": "images/logo/icon.png" },
+    "param2": true,
+    "then": { "name": "load", "file": "ui/loadMain2.json" },
+    "else": { "name": "load", "file": ["ui/dataMissing.json", "fantasycore"] }
+  }
+}

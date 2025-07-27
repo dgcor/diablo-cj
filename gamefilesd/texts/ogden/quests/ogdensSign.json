@@ -1,0 +1,20 @@
+{
+  "action": {
+    "name": "switch",
+    "param": "%currentLevel.quest.ogdensSign.state%",
+    "case": [
+      {
+        "value": 0,
+        "action": { "name": "load", "file": "texts/ogden/quests/ogdensSign1.json" }
+      },
+      {
+        "value": 1,
+        "action": 0
+      },
+      {
+        "value": -1,
+        "action": { "name": "load", "file": "texts/ogden/quests/ogdensSign2.json" }
+      }
+    ]
+  }
+}

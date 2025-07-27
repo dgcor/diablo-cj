@@ -1,0 +1,30 @@
+[package]
+  cjc-version = "1.0.0"
+  name = "Diablo"
+  description = "Diablo and Hellfire game"
+  version = "0.1.0"
+  target-dir = ""
+  src-dir = ""
+  output-type = "executable"
+  compile-option = "--cfg . --dy-std --dy-libs -Woff unused"
+  override-compile-option = "--dy-std --dy-libs"
+  link-option = ""
+  package-configuration = {}
+
+[dependencies]
+  cenum = { path = "dependencies/cenum", output-type = "dynamic" }
+  cjsfml = { path = "dependencies/cjsfml", output-type = "dynamic" }
+  clibrary = { path = "dependencies/clibrary", output-type = "dynamic" }
+  customiterators = { path = "dependencies/customiterators", output-type = "dynamic" }
+  dgengine = { path = "dependencies/dgengine", output-type = "dynamic" }
+  endian = { path = "dependencies/endian", output-type = "dynamic" }
+
+[ffi.c]
+  physfs = { path = "dependencies/physfs" }
+  StormLib = { path = "dependencies/StormLib" }
+
+[target.x86_64-unknown-linux-gnu.bin-dependencies]
+  path-option = ["dependencies/stdx/linux_x86_64_llvm/dynamic/stdx"]
+
+[target.x86_64-w64-mingw32.bin-dependencies]
+  path-option = ["dependencies/stdx/windows_x86_64_llvm/dynamic/stdx"]

@@ -1,0 +1,141 @@
+{
+  "action": [
+    { "name": "resource.add", "id": "gameInfo", "ignorePrevious": true },
+    { "name": "game.fadeIn" },
+    "loadMainMenuImg",
+    "loadLogoImg",
+    {
+      "name": "action.set",
+      "id": "anchorLeftPentagram",
+      "action": { "name": "drawable.anchorToFocused", "id": "pent1", "anchor": "left", "offset": [-10, 0] }
+    },
+    {
+      "name": "action.set",
+      "id": "anchorRightPentagram",
+      "action": { "name": "drawable.anchorToFocused", "id": "pent2", "anchor": "right", "offset": [10, 0] }
+    }
+  ],
+  "inputEvent": [
+    {
+      "gameInputEvent": "enter",
+      "action": "focus.click"
+    },
+    {
+      "gameInputEvent": ["up", "tabUp"],
+      "action": "focus.moveUp"
+    },
+    {
+      "gameInputEvent": ["down", "tabDown"],
+      "action": "focus.moveDown"
+    },
+    {
+      "gameInputEvent": ["esc", "info"],
+      "action": { "name": "button.click", "id": "back" }
+    }
+  ],
+  "animation": [
+    {
+      "id": "pent1",
+      "texturePack": "focus42",
+      "position": [40, 192],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "id": "pent2",
+      "texturePack": "focus42",
+      "position": [564, 192],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "text": [
+    {
+      "id": "openGLVersion",
+      "font": "font42g",
+      "binding": ["%game.openGL.majorVersion%", "%game.openGL.minorVersion%"],
+      "format": "OpenGL [1].[2]",
+      "position": [319, 192],
+      "anchor": "none",
+      "horizontalAlign": "center"
+    },
+    {
+      "id": "hasShaders",
+      "font": "font42g",
+      "position": [319, 235],
+      "anchor": "none",
+      "horizontalAlign": "center"
+    },
+    {
+      "id": "hasGeometryShaders",
+      "font": "font42g",
+      "position": [319, 277],
+      "anchor": "none",
+      "horizontalAlign": "center"
+    },
+    {
+      "id": "hasGameShader",
+      "font": "font42g",
+      "position": [319, 320],
+      "anchor": "none",
+      "horizontalAlign": "center"
+    },
+    {
+      "id": "hasSpriteShader",
+      "font": "font42g",
+      "position": [319, 363],
+      "anchor": "none",
+      "horizontalAlign": "center"
+    }
+  ],
+  "replaceVars": true,
+  "button": {
+    "id": "back",
+    "font": "font42g",
+    "sound": "titlslct",
+    "focus": true,
+    "position": [319, 406],
+    "anchor": "none",
+    "horizontalAlign": "center",
+    "text": "|str_ok|",
+    "onClick": {
+      "name": "game.fadeOut",
+      "action": [
+        { "name": "resource.pop" },
+        { "name": "game.fadeIn" }
+      ]
+    }
+  },
+  "action.update": [
+    {
+      "name": "if.equal",
+      "param1": "%game.openGL.hasShaders%",
+      "param2": true,
+      "then": { "name": "text.setText", "id": "hasShaders", "text": "|str_shaders|: |str_yes|" },
+      "else": { "name": "text.setText", "id": "hasShaders", "text": "|str_shaders|: |str_no|" }
+    },
+    {
+      "name": "if.equal",
+      "param1": "%game.openGL.hasGeometryShaders%",
+      "param2": true,
+      "then": { "name": "text.setText", "id": "hasGeometryShaders", "text": "|str_geometryShaders|: |str_yes|" },
+      "else": { "name": "text.setText", "id": "hasGeometryShaders", "text": "|str_geometryShaders|: |str_no|" }
+    },
+    {
+      "name": "if.equal",
+      "param1": "%game.hasGameShader%",
+      "param2": true,
+      "then": { "name": "text.setText", "id": "hasGameShader", "text": "|str_gameShader|: |str_yes|" },
+      "else": { "name": "text.setText", "id": "hasGameShader", "text": "|str_gameShader|: |str_no|" }
+    },
+    {
+      "name": "if.equal",
+      "param1": "%game.hasSpriteShader%",
+      "param2": true,
+      "then": { "name": "text.setText", "id": "hasSpriteShader", "text": "|str_spriteShader|: |str_yes|" },
+      "else": { "name": "text.setText", "id": "hasSpriteShader", "text": "|str_spriteShader|: |str_no|" }
+    },
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

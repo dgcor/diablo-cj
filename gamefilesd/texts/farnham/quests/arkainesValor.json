@@ -1,0 +1,13 @@
+{
+  "load": [
+    "ui/level/showText.json",
+    "questText",
+    "16",
+    "lang/%lang%/texts/farnham/quests/arkainesValor.txt"
+  ],
+  "audio": {
+    "file": "sfx/Towners/drunk06.wav",
+    "play": true,
+    "volume": "%game.soundVolume%"
+  }
+}

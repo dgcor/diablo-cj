@@ -1,0 +1,18 @@
+{
+  "texturePack": {
+    "id": "{3}",
+    "imageContainer": [
+      "{1}as",
+      "{1}at",
+      "{1}aw",
+      "{1}fm",
+      "{1}ht",
+      "{1}lm",
+      "{1}qm",
+      "{1}st",
+      "{1}wl",
+      "{1}dt"
+    ],
+    "palette": "{2}"
+  }
+}

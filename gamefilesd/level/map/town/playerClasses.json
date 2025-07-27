@@ -1,0 +1,127 @@
+{
+  "playerClass": [
+    {
+      "id": "healer",
+      "fromId": "defaultPlayer",
+      "name": "Pepin the healer",
+      "texturePacks": "healer",
+      "actions": {
+        "action": { "name": "load", "file": "towners/pepin/load.json" }
+      }
+    },
+    {
+      "id": "storyTeller",
+      "fromId": "defaultPlayer",
+      "name": "Cain the elder",
+      "texturePacks": "strytell",
+      "actions": {
+        "action": { "name": "load", "file": "towners/cain/panel.json" }
+      }
+    },
+    {
+      "id": "blacksmith",
+      "fromId": "defaultPlayer",
+      "name": "Griswold the blacksmith",
+      "texturePacks": "smithn",
+      "actions": {
+        "action": { "name": "load", "file": "towners/griswold/panel.json" }
+      }
+    },
+    {
+      "id": "tavernOwner",
+      "fromId": "defaultPlayer",
+      "name": "Ogden the tavern owner",
+      "texturePacks": "twnfn",
+      "actions": {
+        "action": { "name": "load", "file": "towners/ogden/load.json" }
+      }
+    },
+    {
+      "id": "drunk",
+      "fromId": "defaultPlayer",
+      "name": "Farnham the drunk",
+      "texturePacks": "twndrunk",
+      "actions": {
+        "action": { "name": "load", "file": "towners/farnham/panel.json" }
+      }
+    },
+    {
+      "id": "barmaid",
+      "fromId": "defaultPlayer",
+      "name": "Gillian the barmaid",
+      "texturePacks": "wmnn",
+      "actions": {
+        "action": { "name": "load", "file": "towners/gillian/load.json" }
+      }
+    },
+    {
+      "id": "boy",
+      "fromId": "defaultPlayer",
+      "name": "Wirt the peg-legged boy",
+      "texturePacks": "pegkid1",
+      "actions": {
+        "action": { "name": "load", "file": "towners/wirt/panel.json" }
+      }
+    },
+    {
+      "id": "witch",
+      "fromId": "defaultPlayer",
+      "name": "Adria the witch",
+      "texturePacks": "witch",
+      "actions": {
+        "action": { "name": "load", "file": "towners/adria/panel.json" }
+      }
+    },
+    {
+      "id": "deadGuy",
+      "fromId": "defaultPlayer",
+      "nameClassifier": "deadGuy",
+      "texturePacks": "deadguy",
+      "actions": {
+        "action": { "name": "load", "file": "towners/deadGuy/load.json" }
+      }
+    },
+    {
+      "id": "cow",
+      "fromId": "defaultPlayer",
+      "name": "Cow",
+      "type": "Animal",
+      "texturePacks": "cow",
+      "actions": {
+        "action": {
+          "name": "random",
+          "action1": [
+            { "name": "sound.play", "id": "cow1", "unique": true },
+            {
+              "name": "random",
+              "percentage": 0.1,
+              "action1": {
+                "name": "randomList",
+                "actions": [
+                  { "name": "sound.play", "id": "notThirsty", "unique": true },
+                  { "name": "sound.play", "id": "noMilkmaid", "unique": true },
+                  { "name": "sound.play", "id": "ThatsACowAlright", "unique": true }
+                ]
+              }
+            }
+          ],
+          "action2": [
+            { "name": "sound.play", "id": "cow2", "unique": true },
+            {
+              "name": "random",
+              "percentage": 0.1,
+              "action1": {
+                "name": "randomList",
+                "actions": [
+                  { "name": "sound.play", "id": "notThirsty", "unique": true },
+                  { "name": "sound.play", "id": "noMilkmaid", "unique": true },
+                  { "name": "sound.play", "id": "ThatsACowAlright", "unique": true }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

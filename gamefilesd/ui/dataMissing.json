@@ -1,0 +1,25 @@
+{
+  "inputEvent": {
+    "key": ["enter", " ", "esc"],
+    "action": { "name": "game.close" }
+  },
+  "font": {
+    "id": "liberationSerif",
+    "file": "res/LiberationSerif-Regular.ttf"
+  },
+  "replaceVars": true,
+  "button": {
+    "id": "quit",
+    "font": "liberationSerif",
+    "fontSize": 28,
+    "color": "0xFFFFFF",
+    "position": ["center", "center"],
+    "anchor": "none",
+    "horizontalAlign": "center",
+    "verticalAlign": "center",
+    "binding": "{1}",
+    "bindingFlags": "once",
+    "format": "|str_dataMissing|",
+    "onClick": { "name": "game.close" }
+  }
+}

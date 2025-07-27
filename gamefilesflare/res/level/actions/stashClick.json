@@ -1,0 +1,42 @@
+{
+  "action": [
+    {
+      "name": "action.set",
+      "id": "updateStashClick",
+      "action": {
+        "name": "loadJson",
+        "json": {
+          "replaceVars": "value",
+          "action": [
+            { "name": "item.update", "inventory": "stash", "item": ["|stashPosX|", "|stashPosY|"] },
+            "updateStashItems",
+            {
+              "name": "if.equal",
+              "param1": "%currentLevel.currentPlayer.hasSelectedItem%",
+              "param2": true,
+              "then": "updateSelectedItem",
+              "else": "updateStash|$.#stashPosX + 1||$.#stashPosY + 1|Text"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "action.set",
+      "id": "btnStashClick",
+      "action": [
+        {
+          "name": "variable.set",
+          "key": "stashPosX",
+          "value": "%$.:trunc(game.cursor.x - btnStash.position.x / 32 * 10) * 0.1%"
+        },
+        {
+          "name": "variable.set",
+          "key": "stashPosY",
+          "value": "%$.:trunc(game.cursor.y - btnStash.position.y / 32 * 10) * 0.1%"
+        },
+        "updateStashClick"
+      ]
+    }
+  ]
+}

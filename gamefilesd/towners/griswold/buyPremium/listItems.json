@@ -1,0 +1,35 @@
+{
+  "load": "towners/common/loadScrollbarPanel.json",
+  "menu": {
+    "id": "menuPrices",
+    "font": "smaltext",
+    "sound": "titlslct",
+    "position": [571, 94],
+    "horizontalAlign": "right",
+    "horizontalSpaceOffset": 1,
+    "anchor": "none",
+    "focusOnClick": false,
+    "visibleItems": 4,
+    "verticalPad": 38,
+    "items": {
+      "load": "currentLevel.griswold.inventory.1",
+      "text": "%price%",
+      "executeAction": [
+        {
+          "name": "variable.set",
+          "values": {
+            "itemOwnerId": "griswold",
+            "itemInv": 1,
+            "itemIndex": "!listIdx!",
+            "menuIndex": "!menuIdx!"
+          }
+        },
+        "setMenuPriceText"
+      ]
+    }
+  },
+  "action": [
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "load.panel": "towners/common/loadPanel.json",
+  "load.panelMain": "towners/farnham/panelMain.json",
+  "action": { "name": "sound.play", "id": "drunkWelcome" }
+}

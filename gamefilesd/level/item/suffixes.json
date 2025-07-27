@@ -1,0 +1,338 @@
+{
+  "classifier": [
+    {
+      "id": "armorSuffixes",
+      "values": [
+        {
+          "property": "allAttributes",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Trouble" },
+            { "min": -5, "max": -1, "value": "Of The Pit" },
+            { "min": 1, "max": 3, "value": "Of The Sky" },
+            { "min": 4, "max": 7, "value": "Of The Moon" },
+            { "min": 8, "max": 11, "value": "Of The Stars" },
+            { "min": 12, "max": 15, "value": "Of The Heavens" },
+            { "min": 16, "max": "max", "value": "Of The Zodiac" }
+          ]
+        },
+        {
+          "property": "strength",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Frailty" },
+            { "min": -5, "max": -1, "value": "Of Weakness" },
+            { "min": 1, "max": 5, "value": "Of Strength" },
+            { "min": 6, "max": 10, "value": "Of Might" },
+            { "min": 11, "max": 15, "value": "Of Power" },
+            { "min": 16, "max": 20, "value": "Of Giants" },
+            { "min": 21, "max": "max", "value": "Of Titans" }
+          ]
+        },
+        {
+          "property": "magic",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of The Fool" },
+            { "min": -5, "max": -1, "value": "Of Dyslexia" },
+            { "min": 1, "max": 5, "value": "Of Magic" },
+            { "min": 6, "max": 10, "value": "Of The Mind" },
+            { "min": 11, "max": 15, "value": "Of Brilliance" },
+            { "min": 16, "max": 20, "value": "Of Sorcery" },
+            { "min": 21, "max": "max", "value": "Of Wizardry" }
+          ]
+        },
+        {
+          "property": "dexterity",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Paralysis" },
+            { "min": -5, "max": -1, "value": "Of Atrophy" },
+            { "min": 1, "max": 5, "value": "Of Dexterity" },
+            { "min": 6, "max": 10, "value": "Of Skill" },
+            { "min": 11, "max": 15, "value": "Of Accuracy" },
+            { "min": 16, "max": 20, "value": "Of Precision" },
+            { "min": 21, "max": "max", "value": "Of Perfection" }
+          ]
+        },
+        {
+          "property": "vitality",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Illness" },
+            { "min": -5, "max": -1, "value": "Of Disease" },
+            { "min": 1, "max": 5, "value": "Of Vitality" },
+            { "min": 6, "max": 10, "value": "Of Zest" },
+            { "min": 11, "max": 15, "value": "Of Vim" },
+            { "min": 16, "max": 20, "value": "Of Vigor" },
+            { "min": 21, "max": "max", "value": "Of Life" }
+          ]
+        },
+        {
+          "property": "life",
+          "value": [
+            { "min": "min", "max": -11, "value": "Of The Vulture" },
+            { "min": -10, "max": -1, "value": "Of The Jackal" },
+            { "min": 10, "max": 15, "value": "Of The Fox" },
+            { "min": 16, "max": 20, "value": "Of The Jaguar" },
+            { "min": 21, "max": 30, "value": "Of The Eagle" },
+            { "min": 31, "max": 40, "value": "Of The Wolf" },
+            { "min": 41, "max": 50, "value": "Of The Tiger" },
+            { "min": 51, "max": 60, "value": "Of The Lion" },
+            { "min": 61, "max": 80, "value": "Of The Mammoth" },
+            { "min": 81, "max": "max", "value": "Of The Whale" }
+          ]
+        },
+        {
+          "property": "hitRecovery",
+          "value": [
+            { "min": 1, "max": 25, "value": "Of Balance" },
+            { "min": 26, "max": 50, "value": "Of Stability" },
+            { "min": 51, "max": "max", "value": "Of Harmony" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spellSuffixes",
+      "values": {
+        "property": "hasSpell",
+        "value": { "min": true, "max": true, "value": "Of %spell.name%" }
+      }
+    },
+    {
+      "id": "goldSuffix",
+      "values": {
+        "property": "quantity",
+        "value": [
+          { "min": 1, "max": 1, "value": "Piece" },
+          { "min": "min", "max": "max", "value": "Pieces" }
+        ]
+      }
+    },
+    {
+      "id": "weaponSuffixes",
+      "values": [
+        {
+          "property": "allAttributes",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Trouble" },
+            { "min": -5, "max": -1, "value": "Of The Pit" },
+            { "min": 1, "max": 3, "value": "Of The Sky" },
+            { "min": 4, "max": 7, "value": "Of The Moon" },
+            { "min": 8, "max": 11, "value": "Of The Stars" },
+            { "min": 12, "max": 15, "value": "Of The Heavens" },
+            { "min": 16, "max": "max", "value": "Of The Zodiac" }
+          ]
+        },
+        {
+          "property": "strength",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Frailty" },
+            { "min": -5, "max": -1, "value": "Of Weakness" },
+            { "min": 1, "max": 5, "value": "Of Strength" },
+            { "min": 6, "max": 10, "value": "Of Might" },
+            { "min": 11, "max": 15, "value": "Of Power" },
+            { "min": 16, "max": 20, "value": "Of Giants" },
+            { "min": 21, "max": "max", "value": "Of Titans" }
+          ]
+        },
+        {
+          "property": "magic",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of The Fool" },
+            { "min": -5, "max": -1, "value": "Of Dyslexia" },
+            { "min": 1, "max": 5, "value": "Of Magic" },
+            { "min": 6, "max": 10, "value": "Of The Mind" },
+            { "min": 11, "max": 15, "value": "Of Brilliance" },
+            { "min": 16, "max": 20, "value": "Of Sorcery" },
+            { "min": 21, "max": "max", "value": "Of Wizardry" }
+          ]
+        },
+        {
+          "property": "dexterity",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Paralysis" },
+            { "min": -5, "max": -1, "value": "Of Atrophy" },
+            { "min": 1, "max": 5, "value": "Of Dexterity" },
+            { "min": 6, "max": 10, "value": "Of Skill" },
+            { "min": 11, "max": 15, "value": "Of Accuracy" },
+            { "min": 16, "max": 20, "value": "Of Precision" },
+            { "min": 21, "max": "max", "value": "Of Perfection" }
+          ]
+        },
+        {
+          "property": "vitality",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Illness" },
+            { "min": -5, "max": -1, "value": "Of Disease" },
+            { "min": 1, "max": 5, "value": "Of Vitality" },
+            { "min": 6, "max": 10, "value": "Of Zest" },
+            { "min": 11, "max": 15, "value": "Of Vim" },
+            { "min": 16, "max": 20, "value": "Of Vigor" },
+            { "min": 21, "max": "max", "value": "Of Life" }
+          ]
+        },
+        {
+          "property": "hitStealsLife",
+          "value": [
+            { "min": 3, "max": 4, "value": "Of The Leech" },
+            { "min": 5, "max": "max", "value": "Of Blood" }
+          ]
+        },
+        {
+          "property": "hitStealsMana",
+          "value": [
+            { "min": 3, "max": 4, "value": "Of The Bat" },
+            { "min": 5, "max": "max", "value": "Of Vampires" }
+          ]
+        },
+        {
+          "property": "attack",
+          "value": [
+            { "min": 1, "max": 25, "value": "Of Readiness" },
+            { "min": 26, "max": 50, "value": "Of Swiftness" },
+            { "min": 51, "max": 75, "value": "Of Speed" },
+            { "min": 76, "max": "max", "value": "Of Haste" }
+          ]
+        },
+        {
+          "property": "toLightRadius",
+          "value": [
+            { "min": "min", "max": -40, "value": "Of The Dark" },
+            { "min": -39, "max": -20, "value": "Of The Night" },
+            { "min": 20, "max": 39, "value": "Of Light" },
+            { "min": 40, "max": "max", "value": "Of Radiance" }
+          ]
+        },
+        {
+          "property": "toTargetArmor",
+          "value": [
+            { "min": 1, "max": 4, "value": "Of Piercing" },
+            { "min": 5, "max": 8, "value": "Of Puncturing" },
+            { "min": 9, "max": "max", "value": "Of Bashing" }
+          ]
+        },
+        {
+          "property": "damage",
+          "value": [
+            { "min": 1, "max": 2, "value": "Of Quality" },
+            { "min": 3, "max": 5, "value": "Of Maiming" },
+            { "min": 6, "max": 8, "value": "Of Slaying" },
+            { "min": 9, "max": 12, "value": "Of Gore" },
+            { "min": 13, "max": 16, "value": "Of Carnage" },
+            { "min": 17, "max": "max", "value": "Of Slaughter" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jewellerySuffixes",
+      "values": [
+        {
+          "property": "allAttributes",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Trouble" },
+            { "min": -5, "max": -1, "value": "Of The Pit" },
+            { "min": 1, "max": 3, "value": "Of The Sky" },
+            { "min": 4, "max": 7, "value": "Of The Moon" },
+            { "min": 8, "max": 11, "value": "Of The Stars" },
+            { "min": 12, "max": 15, "value": "Of The Heavens" },
+            { "min": 16, "max": "max", "value": "Of The Zodiac" }
+          ]
+        },
+        {
+          "property": "strength",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Frailty" },
+            { "min": -5, "max": -1, "value": "Of Weakness" },
+            { "min": 1, "max": 5, "value": "Of Strength" },
+            { "min": 6, "max": 10, "value": "Of Might" },
+            { "min": 11, "max": 15, "value": "Of Power" },
+            { "min": 16, "max": 20, "value": "Of Giants" },
+            { "min": 21, "max": "max", "value": "Of Titans" }
+          ]
+        },
+        {
+          "property": "magic",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of The Fool" },
+            { "min": -5, "max": -1, "value": "Of Dyslexia" },
+            { "min": 1, "max": 5, "value": "Of Magic" },
+            { "min": 6, "max": 10, "value": "Of The Mind" },
+            { "min": 11, "max": 15, "value": "Of Brilliance" },
+            { "min": 16, "max": 20, "value": "Of Sorcery" },
+            { "min": 21, "max": "max", "value": "Of Wizardry" }
+          ]
+        },
+        {
+          "property": "dexterity",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Paralysis" },
+            { "min": -5, "max": -1, "value": "Of Atrophy" },
+            { "min": 1, "max": 5, "value": "Of Dexterity" },
+            { "min": 6, "max": 10, "value": "Of Skill" },
+            { "min": 11, "max": 15, "value": "Of Accuracy" },
+            { "min": 16, "max": 20, "value": "Of Precision" },
+            { "min": 21, "max": "max", "value": "Of Perfection" }
+          ]
+        },
+        {
+          "property": "vitality",
+          "value": [
+            { "min": "min", "max": -6, "value": "Of Illness" },
+            { "min": -5, "max": -1, "value": "Of Disease" },
+            { "min": 1, "max": 5, "value": "Of Vitality" },
+            { "min": 6, "max": 10, "value": "Of Zest" },
+            { "min": 11, "max": 15, "value": "Of Vim" },
+            { "min": 16, "max": 20, "value": "Of Vigor" },
+            { "min": 21, "max": "max", "value": "Of Life" }
+          ]
+        },
+        {
+          "property": "life",
+          "value": [
+            { "min": "min", "max": -11, "value": "Of The Vulture" },
+            { "min": -10, "max": -1, "value": "Of The Jackal" },
+            { "min": 10, "max": 15, "value": "Of The Fox" },
+            { "min": 16, "max": 20, "value": "Of The Jaguar" },
+            { "min": 21, "max": 30, "value": "Of The Eagle" },
+            { "min": 31, "max": 40, "value": "Of The Wolf" },
+            { "min": 41, "max": 50, "value": "Of The Tiger" },
+            { "min": 51, "max": 60, "value": "Of The Lion" },
+            { "min": 61, "max": 80, "value": "Of The Mammoth" },
+            { "min": 81, "max": "max", "value": "Of The Whale" }
+          ]
+        },
+        {
+          "property": "hitRecovery",
+          "value": [
+            { "min": 1, "max": 25, "value": "Of Balance" },
+            { "min": 26, "max": 50, "value": "Of Stability" },
+            { "min": 51, "max": "max", "value": "Of Harmony" }
+          ]
+        },
+        {
+          "property": "toLightRadius",
+          "value": [
+            { "min": "min", "max": -40, "value": "Of The Dark" },
+            { "min": -39, "max": -20, "value": "Of The Night" },
+            { "min": 20, "max": 39, "value": "Of Light" },
+            { "min": 40, "max": "max", "value": "Of Radiance" }
+          ]
+        },
+        {
+          "property": "damageFromEnemies",
+          "value": [
+            { "min": 2, "max": "max", "value": "Of Pain" },
+            { "min": 1, "max": 1, "value": "Of Tears" },
+            { "min": -1, "max": -1, "value": "Of Health" },
+            { "min": -2, "max": -2, "value": "Of Protection" },
+            { "min": -3, "max": -3, "value": "Of Absorption" },
+            { "min": -4, "max": -4, "value": "Of Deflection" },
+            { "min": "min", "max": -5, "value": "Of Osmosis" }
+          ]
+        },
+        {
+          "property": "ofThieves",
+          "value": { "value": "Of Thieves" }
+        }
+      ]
+    }
+  ]
+}

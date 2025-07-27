@@ -1,0 +1,99 @@
+{
+  "playerClass": {
+    "id": "Bard",
+    "replaceVars": true,
+    "name": "Bard",
+    "type": "Human",
+    "outline": "|outlineFriend|",
+    "outlineIgnore": "0x000000",
+    "light": [255, 10],
+    "defaults": {
+      "experience": 0,
+      "points": 0,
+      "strength": 20,
+      "magic": 20,
+      "dexterity": 25,
+      "vitality": 20,
+      "bonusLife": 1,
+      "bonusMana": 2,
+      "bonusHealing": 1.5,
+      "spellM": 0.75,
+      "defaultDamageMin": 1,
+      "levelUp": 5
+    },
+    "maxStrength": 120,
+    "maxMagic": 120,
+    "maxDexterity": 120,
+    "maxVitality": 100,
+    "maxResistMagic": 75,
+    "maxResistFire": 75,
+    "maxResistLightning": 75,
+    "formulas": {
+      "life": "vitality + (1.5 * vitalityItems) + (2 * level) + lifeItems + 23",
+      "mana": "(1.5 * magic) + (1.75 * magicItems) + (2 * level) + manaItems + 3",
+      "armor": "dexterityNow * 0.2 + armorItems",
+      "toHit": "dexterityNow * 0.5 + toHitItems + 50",
+      "damage": "strengthNow + dexterityNow * level / 500"
+    },
+    "texturePacks": [
+      "rogueNormal",
+      "rogueNormalAxe",
+      "rogueNormalBow",
+      "rogueNormalShieldSword",
+      "rogueNormalShieldClub",
+      "rogueNormalClub",
+      "rogueNormalSword",
+      "rogueNormalStaff",
+      "rogueNormalShield",
+      "rogueLeather",
+      "rogueLeatherAxe",
+      "rogueLeatherBow",
+      "rogueLeatherShieldSword",
+      "rogueLeatherShieldClub",
+      "rogueLeatherClub",
+      "rogueLeatherSword",
+      "rogueLeatherStaff",
+      "rogueLeatherShield",
+      "roguePlate",
+      "roguePlateAxe",
+      "roguePlateBow",
+      "roguePlateShieldSword",
+      "roguePlateShieldClub",
+      "roguePlateClub",
+      "roguePlateSword",
+      "roguePlateStaff",
+      "roguePlateShield"
+    ],
+    "textureIndexes": [
+      { "name": "Stand1", "index": 7 },
+      { "name": "Stand2", "index": 0 },
+      { "name": "Walk1", "index": 8 },
+      { "name": "Walk2", "index": 2 },
+      { "name": "Attack1", "index": 1 },
+      { "name": "Attack2", "index": 3 },
+      { "name": "Attack3", "index": 5 },
+      { "name": "Attack4", "index": 6 },
+      { "name": "Defend1", "index": 4 },
+      { "name": "Defend2", "index": 4 },
+      { "name": "Defend3", "index": 4 },
+      { "name": "Defend4", "index": 4 },
+      { "name": "Hit1", "index": 4 },
+      { "name": "Hit2", "index": 4 },
+      { "name": "Die1", "index": 9 },
+      { "name": "Die2", "index": 9 }
+    ],
+    "animationSpeeds": [
+      { "name": "Walk1", "animation": 20, "walk": 100 },
+      { "name": "Walk2", "animation": 20, "walk": 100 },
+      { "name": "Die1", "animation": 20 },
+      { "name": "Die2", "animation": 20 }
+    ],
+    "actions": {
+      "levelChange": "updateCharPoints"
+    },
+    "sounds": [
+      { "id": "walk", "sound": "walk" },
+      { "id": "die", "sound": "die" }
+    ]
+  }
+}

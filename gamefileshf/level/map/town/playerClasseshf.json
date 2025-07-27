@@ -1,0 +1,11 @@
+{
+  "playerClass": {
+    "id": "farmer",
+    "fromId": "defaultPlayer",
+    "name": "Lester the farmer",
+    "texturePacks": "farmrn2",
+    "actions": {
+      "action": { "name": "load", "file": "towners/lester/load.json" }
+    }
+  }
+}

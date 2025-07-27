@@ -1,0 +1,110 @@
+{
+  "itemClass": [
+    {
+      "id": "club",
+      "fromId": "baseWeapon",
+      "dropTexturePack": "mace",
+      "inventoryTextureIndex": 77,
+      "name": "Club",
+      "shortName": "Club",
+      "type": "Club",
+      "defaults": {
+        "basePrice": 20,
+        "damageMin": 1,
+        "damageMax": 6,
+        "durability": 20,
+        "durabilityMax": 20
+      },
+      "inventorySize": [1, 3]
+    },
+    {
+      "id": "spikedClub",
+      "fromId": "club",
+      "inventoryTextureIndex": 81,
+      "name": "Spiked Club",
+      "defaults": {
+        "basePrice": 225,
+        "damageMin": 3,
+        "damageMax": 6,
+        "durability": 20,
+        "durabilityMax": 20,
+        "requiredStrength": 18
+      }
+    },
+    {
+      "id": "mace",
+      "fromId": "club",
+      "inventoryTextureIndex": 70,
+      "name": "Mace",
+      "shortName": "Mace",
+      "defaults": {
+        "basePrice": 200,
+        "damageMin": 1,
+        "damageMax": 8,
+        "durability": 32,
+        "durabilityMax": 32,
+        "requiredStrength": 16
+      }
+    },
+    {
+      "id": "morningStar",
+      "fromId": "mace",
+      "inventoryTextureIndex": 74,
+      "name": "Morning Star",
+      "defaults": {
+        "basePrice": 300,
+        "damageMin": 1,
+        "damageMax": 10,
+        "durability": 40,
+        "durabilityMax": 40,
+        "requiredStrength": 26
+      }
+    },
+    {
+      "id": "flail",
+      "fromId": "mace",
+      "inventoryTextureIndex": 142,
+      "name": "Flail",
+      "shortName": "Flail",
+      "defaults": {
+        "basePrice": 500,
+        "damageMin": 2,
+        "damageMax": 12,
+        "durability": 36,
+        "durabilityMax": 36,
+        "requiredStrength": 30
+      },
+      "inventorySize": [2, 3]
+    },
+    {
+      "id": "warHammer",
+      "fromId": "flail",
+      "inventoryTextureIndex": 132,
+      "name": "War Hammer",
+      "shortName": "Hammer",
+      "defaults": {
+        "basePrice": 600,
+        "damageMin": 5,
+        "damageMax": 9,
+        "durability": 50,
+        "durabilityMax": 50,
+        "requiredStrength": 40
+      }
+    },
+    {
+      "id": "maul",
+      "fromId": "flail",
+      "inventoryTextureIndex": 133,
+      "name": "Maul",
+      "shortName": "Maul",
+      "defaults": {
+        "basePrice": 900,
+        "damageMin": 6,
+        "damageMax": 20,
+        "durability": 50,
+        "durabilityMax": 50,
+        "requiredStrength": 55
+      }
+    }
+  ]
+}

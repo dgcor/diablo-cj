@@ -1,0 +1,24 @@
+{
+  "inputEvent": [
+    {
+      "gameInputEvent": "up",
+      "event": "level.up"
+    },
+    {
+      "gameInputEvent": "down",
+      "event": "level.down"
+    },
+    {
+      "gameInputEvent": "left",
+      "event": "level.left"
+    },
+    {
+      "gameInputEvent": "right",
+      "event": "level.right"
+    },
+    {
+      "gameInputEvent": "action",
+      "event": "level.doAction"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "itemClass": [
+    {
+      "id": "cap",
+      "fromId": "baseArmor",
+      "dropTexturePack": "helmut",
+      "inventoryTextureIndex": 102,
+      "name": "Cap",
+      "shortName": "Cap",
+      "type": "Helmet",
+      "defaults": {
+        "basePrice": 15,
+        "armor": 3,
+        "durability": 15,
+        "durabilityMax": 15
+      },
+      "inventorySize": [2, 2],
+      "actions": {
+        "levelDrop": { "name": "sound.play", "id": "flipcap" },
+        "inventoryDrop": { "name": "sound.play", "id": "invcap" }
+      }
+    },
+    {
+      "id": "skullCap",
+      "fromId": "cap",
+      "inventoryTextureIndex": 101,
+      "name": "Skull Cap",
+      "defaults": {
+        "basePrice": 25,
+        "armor": 4,
+        "durability": 20,
+        "durabilityMax": 20
+      }
+    },
+    {
+      "id": "helm",
+      "fromId": "cap",
+      "inventoryTextureIndex": 93,
+      "name": "Helm",
+      "shortName": "Helm",
+      "defaults": {
+        "basePrice": 40,
+        "armor": 6,
+        "durability": 30,
+        "durabilityMax": 30,
+        "requiredStrength": 25
+      }
+    },
+    {
+      "id": "fullHelm",
+      "fromId": "helm",
+      "inventoryTextureIndex": 86,
+      "name": "Full Helm",
+      "defaults": {
+        "basePrice": 90,
+        "armor": 8,
+        "durability": 35,
+        "durabilityMax": 35,
+        "requiredStrength": 35
+      }
+    },
+    {
+      "id": "crown",
+      "fromId": "helm",
+      "inventoryTextureIndex": 106,
+      "name": "Crown",
+      "shortName": "Crown",
+      "defaults": {
+        "basePrice": 200,
+        "armor": 12,
+        "durability": 40,
+        "durabilityMax": 40,
+        "requiredStrength": 0
+      }
+    },
+    {
+      "id": "greatHelm",
+      "fromId": "helm",
+      "inventoryTextureIndex": 109,
+      "name": "Great Helm",
+      "defaults": {
+        "basePrice": 400,
+        "armor": 15,
+        "durability": 60,
+        "durabilityMax": 60,
+        "requiredStrength": 50
+      }
+    }
+  ]
+}

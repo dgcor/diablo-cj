@@ -1,0 +1,15 @@
+{
+  "itemClass": [
+    {
+      "id": "ring",
+      "fromId": "amulet",
+      "inventoryTextureIndex": 23,
+      "name": "Ring",
+      "shortName": "Ring",
+      "type": "Ring",
+      "defaults": {
+        "basePrice": 1000
+      }
+    }
+  ]
+}

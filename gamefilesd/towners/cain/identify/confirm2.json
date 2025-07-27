@@ -1,0 +1,128 @@
+{
+  "action": [
+    { "name": "resource.add", "id": "userPanelConfirm", "ignorePrevious": true },
+    { "name": "load", "file": "ui/level/panel/big/upperSeparator.json" },
+    {
+      "name": "action.set",
+      "id": "anchorLeftPentagram",
+      "action": "anchorLeftPentagram2"
+    },
+    {
+      "name": "action.set",
+      "id": "anchorRightPentagram",
+      "action": "anchorRightPentagram2"
+    }
+  ],
+  "animation": [
+    {
+      "texturePack": "pentspn2",
+      "id": "pent1",
+      "position": [32, 94],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "texturePack": "pentspn2",
+      "id": "pent2",
+      "position": [575, 94],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "replaceVars": true,
+  "text": [
+    {
+      "id": "itemInfo",
+      "font": "smaltext",
+      "position": [51, 130],
+      "anchor": "none",
+      "horizontalSpaceOffset": 1,
+      "verticalSpaceOffset": 2
+    },
+    {
+      "id": "itemPrice",
+      "replaceVars": true,
+      "font": "smaltext",
+      "position": [571, 130],
+      "anchor": "none",
+      "horizontalAlign": "right",
+      "horizontalSpaceOffset": 1,
+      "text": "|identifyPrice|"
+    },
+    {
+      "id": "confirm",
+      "font": "smaltext",
+      "position": [320, 214],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_confirmIdentify|"
+    }
+  ],
+  "button": [
+    {
+      "id": "yes",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [320, 250],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_yes|",
+      "onClick": [
+        {
+          "name": "player.removeItemQuantity",
+          "itemClass": "gold",
+          "value": "%identifyPrice%"
+        },
+        {
+          "name": "item.setProperty",
+          "inventory": {1},
+          "item": {2},
+          "property": "identified",
+          "value": true
+        },
+        "updateAllPlayerStats",
+        { "name": "load", "file": ["towners/cain/identify/item.json", "{1}", "{2}"] }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "back",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [320, 274],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_no|",
+      "onClick": { "name": "resource.popAll", "id": "userPanelConfirm" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    }
+  ],
+  "action.update": [
+    {
+      "name": "variable.set",
+      "values": {
+        "itemOwnerId": "hero",
+        "itemInv": {1},
+        "itemIndex": {2},
+        "itemPrice": "%identifyPrice%"
+      }
+    },
+    "setItemInfo",
+    "setPriceInfo",
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

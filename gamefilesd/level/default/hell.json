@@ -1,0 +1,56 @@
+{
+  "action": {
+    "name": "if.equal",
+    "param1": "%game.hasPalette.level%",
+    "param2": false,
+    "then": {
+      "name": "loadJson",
+      "json": {
+        "palette": {
+          "id": "level",
+          "file": "levels/l4data/l4_1.pal"
+        }
+      }
+    }
+  },
+  "variable": [
+    { "colorCycleSpeed": 50 },
+    { "colorCycleStart": 1 },
+    { "colorCycleStop": 32 }
+  ],
+  "palette": {
+    "id": "colorCycle",
+    "fromId": "level"
+  },
+  "imageContainer": {
+    "file": "levels/l4data/l4.cel"
+  },
+  "texturePack": [
+    {
+      "id": "l4",
+      "imageContainer": "l4",
+      "palette": "level",
+      "min": "levels/l4data/l4.min",
+      "minBlocks": 16
+    },
+    {
+      "id": "l4_top",
+      "imageContainer": "l4",
+      "palette": "level",
+      "min": "levels/l4data/l4.min",
+      "minBlocks": 16,
+      "topTiles": true
+    }
+  ],
+  "level": {
+    "id": "level",
+    "layers": [
+      { "index": 0, "texturePack": "l4" },
+      { "index": 0, "texturePack": "l4_top" }
+    ],
+    "outOfBoundsTile": 19,
+    "til": "levels/l4data/l4.til",
+    "flags": "levels/l4data/l4.sol",
+    "defaultLight": 255
+  }
+}

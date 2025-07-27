@@ -1,0 +1,33 @@
+{
+  "action": {
+    "name": "switch",
+    "param": "%charClass%",
+    "case": [
+      {
+        "value": "Warrior",
+        "action": { "name": "image.setTexture", "id": "heros", "texturePack": "heros", "index": 0 }
+      },
+      {
+        "value": "Rogue",
+        "action": { "name": "image.setTexture", "id": "heros", "texturePack": "heros", "index": 1 }
+      },
+      {
+        "value": "Sorceror",
+        "action": { "name": "image.setTexture", "id": "heros", "texturePack": "heros", "index": 2 }
+      },
+      {
+        "value": "Monk",
+        "action": { "name": "image.setTexture", "id": "heros", "texturePack": "heros", "index": 3 }
+      },
+      {
+        "value": "Bard",
+        "action": "Rogue"
+      },
+      {
+        "value": "Barbarian",
+        "action": "Warrior"
+      }
+    ],
+    "default": { "name": "image.setTexture", "id": "heros", "texturePack": "heros", "index": 5 }
+  }
+}

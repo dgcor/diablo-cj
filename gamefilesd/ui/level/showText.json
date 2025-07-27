@@ -1,0 +1,57 @@
+{
+  "action": {
+    "name": "resource.add",
+    "id": "{1}"
+  },
+  "load": "ui/level/char/disableKeys.json",
+  "inputEvent": {
+    "gameInputEvent": ["enter", "esc"],
+    "action": { "name": "button.click", "id": "textWallButton" }
+  },
+  "image": [
+    {
+      "id": "textWallBackground",
+      "position": [27, 28],
+      "anchor": "none",
+      "textureRect": [588, 300],
+      "texture": "textWallBackground"
+    },
+    {
+      "id": "textWallBorder",
+      "position": [24, 25],
+      "anchor": "none",
+      "texture": "textbox"
+    }
+  ],
+  "button": {
+    "id": "textWallButton",
+    "anchor": "all",
+    "textureRect": [640, 480],
+    "texture": "empty",
+    "captureInputEvents": true,
+    "resizable": true,
+    "onClick": [
+      { "name": "resource.pop" },
+      "afterShowText"
+    ]
+  },
+  "text": {
+    "id": "textBoxText",
+    "font": "medtexts",
+    "file": "{3}",
+    "horizontalSpaceOffset": 2,
+    "verticalSpaceOffset": 17
+  },
+  "scrollable": {
+    "id": "textBoxScroll",
+    "drawable": "textBoxText",
+    "refresh": {2},
+    "position": [48, 49],
+    "size": [550, 257],
+    "anchor": "none",
+    "onComplete": [
+      { "name": "resource.pop" },
+      "afterShowText"
+    ]
+  }
+}

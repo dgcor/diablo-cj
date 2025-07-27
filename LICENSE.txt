@@ -1,0 +1,36 @@
+Diablo uses the zLib license.
+
+A part of the BitmapFont class is based on a bitmap font implementation for SDL
+by Lazy Foo' Productions. The license is incompatible with GPL like licenses.
+
+http://lazyfoo.net
+
+cjsfml and dgengine uses the zlib/png license.
+
+https://github.com/causerp/cjsfml
+https://github.com/dgcor/dgengine-cj
+
+cenum, clibrary, ctemplate, customiterators and endian use the MIT no attribution license.
+
+https://github.com/causerp/cenum
+https://github.com/causerp/clibrary
+https://github.com/causerp/ctemplate
+https://github.com/causerp/customiterators
+https://github.com/causerp/endian
+
+PhysFS uses the zlib license.
+
+https://github.com/icculus/physfs
+
+SFML uses the zlib/png license.
+
+https://github.com/SFML/SFML
+
+StormLib uses the MIT license.
+
+https://github.com/ladislav-zezula/StormLib
+
+Other SFML code snippets were taken from the wiki
+and should have a permissive license.
+
+If you feel there is a problem with licensing, contact me.

@@ -1,0 +1,4 @@
+{
+  "load.shader": "res/shaders/sprite/diablo2.json",
+  "load.main": "ui/loadMain.json"
+}

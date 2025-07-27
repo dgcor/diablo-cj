@@ -1,0 +1,235 @@
+{
+  "action": [
+    { "name": "resource.add", "id": "shaderSettings", "ignorePrevious": true },
+    { "name": "game.fadeIn" },
+    "loadMainMenuImg",
+    "loadLogoImg"
+  ],
+  "inputEvent": [
+    {
+      "gameInputEvent": "enter",
+      "action": "focus.click"
+    },
+    {
+      "gameInputEvent": ["up", "tabUp"],
+      "action": "focus.moveUp"
+    },
+    {
+      "gameInputEvent": ["down", "tabDown"],
+      "action": "focus.moveDown"
+    },
+    {
+      "gameInputEvent": "esc",
+      "action": { "name": "button.click", "id": "back" }
+    }
+  ],
+  "animation": [
+    {
+      "id": "pent1",
+      "texturePack": "focus42",
+      "position": [20, 192],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "id": "pent2",
+      "texturePack": "focus42",
+      "position": [584, 192],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "replaceVars": true,
+  "button": [
+    {
+      "id": "gameShader",
+      "font": "font42g",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [319, 192],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "text": "|str_gameShader|: |str_default|",
+      "onClick": {
+        "name": "switch",
+        "param": "%gameShader.text%",
+        "case": [
+          {
+            "value": "|str_gameShader|: |str_default|",
+            "action": [
+              { "name": "load", "file": "res/shaders/game/grayscale.json" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_shaderGrayscale|" }
+            ]
+          },
+          {
+            "value": "|str_gameShader|: |str_shaderGrayscale|",
+            "action": [
+              { "name": "load", "file": "res/shaders/game/grain.json" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_shaderGrain|" }
+            ]
+          },
+          {
+            "value": "|str_gameShader|: |str_shaderGrain|",
+            "action": [
+              { "name": "load", "file": "res/shaders/game/warp.json" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_shaderWarp|" }
+            ]
+          },
+          {
+            "value": "|str_gameShader|: |str_shaderWarp|",
+            "action": [
+              { "name": "load", "file": "res/shaders/game/swirl.json" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_shaderSwirl|" }
+            ]
+          },
+          {
+            "value": "|str_gameShader|: |str_shaderSwirl|",
+            "action": [
+              { "name": "load", "file": "res/shaders/game/lanczos6tap.json" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_shaderLanczos|" }
+            ]
+          },
+          {
+            "value": "|str_gameShader|: |str_shaderLanczos|",
+            "action": [
+              { "name": "load", "file": "res/shaders/game/scale4xhq.json" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_shaderScale4xhq|" }
+            ]
+          },
+          {
+            "value": "|str_gameShader|: |str_shaderScale4xhq|",
+            "action": [
+              { "name": "load", "file": "res/shaders/game/xbrz4x.json" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_shaderXbrz4x|" }
+            ]
+          },
+          {
+            "value": "|str_gameShader|: |str_shaderXbrz4x|",
+            "action": [
+              { "name": "game.setShader", "shader": "game", "gameShader": "game" },
+              { "name": "text.setText", "id": "gameShader", "text": "|str_gameShader|: |str_default|" }
+            ]
+          }
+        ],
+        "default": "|str_gameShader|: |str_shaderXbrz4x|"
+      },
+      "onFocus": "anchorPentagrams"
+    },
+    {
+      "id": "spriteShader",
+      "font": "font42g",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [319, 235],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "text": "|str_spriteShader|: |str_default|",
+      "onClick": {
+        "name": "switch",
+        "param": "%spriteShader.text%",
+        "case": [
+          {
+            "value": "|str_spriteShader|: |str_default|",
+            "action": [
+              { "name": "load", "file": "res/shaders/sprite/highlight.json" },
+              { "name": "text.setText", "id": "spriteShader", "text": "|str_spriteShader|: |str_shaderHighlight|" }
+            ]
+          }
+        ],
+        "default": [
+          { "name": "game.setShader", "shader": "sprite", "gameShader": "sprite" },
+          { "name": "text.setText", "id": "spriteShader", "text": "|str_spriteShader|: |str_default|" }
+        ]
+      },
+      "onFocus": "anchorPentagrams"
+    },
+    {
+      "id": "maxLights",
+      "font": "font42g",
+      "sound": "titlemov",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [319, 277],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "text": "|str_maxLights|: 128",
+      "onClick": {
+        "name": "switch",
+        "param": "%maxLights.text%",
+        "case": [
+          {
+            "value": "|str_maxLights|: 128",
+            "action": [
+              { "name": "game.setProperty", "property": "maxLights", "value": 0 },
+              { "name": "text.setText", "id": "maxLights", "text": "|str_maxLights|: 0" }
+            ]
+          },
+          {
+            "value": "|str_maxLights|: 0",
+            "action": [
+              { "name": "game.setProperty", "property": "maxLights", "value": 2 },
+              { "name": "text.setText", "id": "maxLights", "text": "|str_maxLights|: 2" }
+            ]
+          },
+          {
+            "value": "|str_maxLights|: 2",
+            "action": [
+              { "name": "game.setProperty", "property": "maxLights", "value": 4 },
+              { "name": "text.setText", "id": "maxLights", "text": "|str_maxLights|: 4" }
+            ]
+          },
+          {
+            "value": "|str_maxLights|: 4",
+            "action": [
+              { "name": "game.setProperty", "property": "maxLights", "value": 16 },
+              { "name": "text.setText", "id": "maxLights", "text": "|str_maxLights|: 16" }
+            ]
+          },
+          {
+            "value": "|str_maxLights|: 16",
+            "action": [
+              { "name": "game.setProperty", "property": "maxLights", "value": 64 },
+              { "name": "text.setText", "id": "maxLights", "text": "|str_maxLights|: 64" }
+            ]
+          },
+          {
+            "value": "|str_maxLights|: 64",
+            "action": [
+              { "name": "game.setProperty", "property": "maxLights", "value": 128 },
+              { "name": "text.setText", "id": "maxLights", "text": "|str_maxLights|: 128" }
+            ]
+          }
+        ],
+        "default": "|str_maxLights|: 64"
+      },
+      "onFocus": "anchorPentagrams"
+    },
+    {
+      "id": "back",
+      "font": "font42g",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [319, 320],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "text": "|str_ok|",
+      "onClick": {
+        "name": "game.fadeOut",
+        "action": [
+          { "name": "resource.pop" },
+          { "name": "game.fadeIn" }
+        ]
+      },
+      "onFocus": "anchorPentagrams"
+    }
+  ],
+  "action.update": [
+    { "name": "game.setShader", "shader": "game", "gameShader": "game" },
+    { "name": "game.setShader", "shader": "sprite", "gameShader": "sprite" },
+    { "name": "game.setProperty", "property": "maxLights", "value": 128 },
+    "anchorPentagrams"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "load": [
+    "ui/level/showText.json",
+    "questText",
+    "25",
+    "lang/%lang%/texts/wirt/quests/theButcher.txt"
+  ],
+  "audio": {
+    "file": "sfx/Towners/pegboy10.wav",
+    "play": true,
+    "volume": "%game.soundVolume%"
+  }
+}

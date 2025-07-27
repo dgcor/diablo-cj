@@ -1,0 +1,40 @@
+{
+  "load": "towners/common/loadScrollbarPanel.json",
+  "menu": {
+    "id": "menuPrices",
+    "replaceVars": true,
+    "font": "smaltext",
+    "sound": "titlslct",
+    "position": [571, 94],
+    "horizontalAlign": "right",
+    "horizontalSpaceOffset": 1,
+    "anchor": "none",
+    "focusOnClick": false,
+    "visibleItems": 4,
+    "verticalPad": 38,
+    "items": {
+      "load": "currentLevel.currentPlayer.inventory.stash",
+      "include": {
+        "property": "itemType",
+        "value": ["Amulet", "Armor", "Axe", "Bow", "Club", "Helmet", "Ring", "Shield", "Sword"]
+      },
+      "text": "%eval.|sellPrice|%",
+      "executeAction": [
+        {
+          "name": "variable.set",
+          "values": {
+            "itemOwnerId": "hero",
+            "itemInv": 2,
+            "itemIndex": "!listIdx!",
+            "menuIndex": "!menuIdx!"
+          }
+        },
+        "setMenuPriceText"
+      ]
+    }
+  },
+  "action": [
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

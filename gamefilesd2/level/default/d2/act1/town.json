@@ -1,0 +1,126 @@
+{
+  "action": {
+    "name": "if.equal",
+    "param1": "%game.hasPalette.level%",
+    "param2": false,
+    "then": {
+      "name": "loadJson",
+      "json": {
+        "palette": {
+          "id": "level",
+          "fromId": "act1"
+        }
+      }
+    }
+  },
+  "imageContainer": [
+    {
+      "id": "treegroups",
+      "file": "data/global/tiles/ACT1/OUTDOORS/treegroups.dt1"
+    },
+    {
+      "id": "stonewall",
+      "file": "data/global/tiles/ACT1/OUTDOORS/stonewall.dt1"
+    },
+    {
+      "id": "floor",
+      "file": "data/global/tiles/ACT1/TOWN/floor.dt1"
+    },
+    {
+      "id": "warp",
+      "file": "data/global/tiles/ACT1/BARRACKS/warp.dt1"
+    },
+    {
+      "id": "river",
+      "file": "data/global/tiles/ACT1/OUTDOORS/river.dt1"
+    },
+    {
+      "id": "objects",
+      "file": "data/global/tiles/ACT1/TOWN/objects.dt1"
+    },
+    {
+      "id": "fence",
+      "file": "data/global/tiles/ACT1/TOWN/fence.dt1"
+    },
+    {
+      "id": "objects2",
+      "file": "data/global/tiles/ACT1/OUTDOORS/objects.dt1"
+    }
+  ],
+  "texturePack": [
+    {
+      "id": "treegroups",
+      "imageContainer": "treegroups",
+      "palette": "level"
+    },
+    {
+      "id": "stonewall",
+      "imageContainer": "stonewall",
+      "palette": "level"
+    },
+    {
+      "id": "floor",
+      "imageContainer": "floor",
+      "palette": "level"
+    },
+    {
+      "id": "warp",
+      "imageContainer": "warp",
+      "palette": "level"
+    },
+    {
+      "id": "river",
+      "imageContainer": "river",
+      "palette": "level"
+    },
+    {
+      "id": "objects",
+      "imageContainer": "objects",
+      "palette": "level"
+    },
+    {
+      "id": "fence",
+      "imageContainer": "fence",
+      "palette": "level"
+    },
+    {
+      "id": "objects2",
+      "imageContainer": "objects2",
+      "palette": "level"
+    },
+    {
+      "id": "town",
+      "texturePacks": [
+        "treegroups",
+        "stonewall",
+        "floor",
+        "warp",
+        "river",
+        "objects",
+        "fence",
+        "objects2"
+      ]
+    }
+  ],
+  "level": {
+    "id": "level",
+    "tileSize": [32, 16],
+    "subTiles": 5,
+    "layers": [
+      { "index": 0, "texturePack": "town" },
+      { "index": 1, "texturePack": "town" },
+      { "index": 2, "texturePack": "town" },
+      { "index": 3, "texturePack": "town", "drawObjects": true },
+      { "index": 4, "texturePack": "town" },
+      { "index": 5, "texturePack": "town" },
+      { "index": 6, "texturePack": "town" },
+      { "index": 7, "texturePack": "town" },
+      { "index": 8, "texturePack": "town" },
+      { "index": 9, "texturePack": "town" },
+      { "index": 10, "texturePack": "town" },
+      { "index": 11, "texturePack": "town" }
+    ],
+    "flags": "town",
+    "defaultLight": 255
+  }
+}

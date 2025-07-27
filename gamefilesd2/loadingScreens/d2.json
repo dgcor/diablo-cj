@@ -1,0 +1,26 @@
+{
+  "action": { "name": "resource.add", "id": "loadingScreen" },
+  "imageContainer": {
+    "id": "loadingscreen",
+    "file": "data/global/ui/Loading/loadingscreen.dc6",
+    "stitch": false
+  },
+  "texturePack": {
+    "id": "loadingscreen",
+    "imageContainer": "loadingscreen",
+    "palette": "loading"
+  },
+  "loadingScreen": {
+    "texturePack": "loadingscreen",
+    "position": ["center", "center"],
+    "anchor": "none",
+    "onComplete": {
+      "name": "game.fadeOut",
+      "action": [
+        { "name": "loadingScreen.clear" },
+        { "name": "resource.pop", "id": "loadingScreen" },
+        { "name": "game.fadeIn" }
+      ]
+    }
+  }
+}

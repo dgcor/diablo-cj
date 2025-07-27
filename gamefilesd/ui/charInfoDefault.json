@@ -1,0 +1,10 @@
+{
+  "action": [
+    { "name": "variable.set", "key": "charClass", "value": null },
+    { "name": "text.setText", "id": "txtLevel", "text": "--" },
+    { "name": "text.setText", "id": "txtStrength", "text": "--" },
+    { "name": "text.setText", "id": "txtMagic", "text": "--" },
+    { "name": "text.setText", "id": "txtDexterity", "text": "--" },
+    { "name": "text.setText", "id": "txtVitality", "text": "--" }
+  ]
+}

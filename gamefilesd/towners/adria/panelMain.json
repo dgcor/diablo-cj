@@ -1,0 +1,155 @@
+{
+  "action": {
+    "name": "resource.add",
+    "id": "userPanelMain"
+  },
+  "animation": [
+    {
+      "texturePack": "pentspn2",
+      "id": "pent1",
+      "position": [67, 140],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "texturePack": "pentspn2",
+      "id": "pent2",
+      "position": [537, 140],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "replaceVars": true,
+  "text": [
+    {
+      "id": "panelTitle1",
+      "font": "smaltextGold",
+      "position": [480, 58],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_titleAdria|"
+    },
+    {
+      "id": "panelText",
+      "font": "smaltextGold",
+      "position": [480, 142],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_panelText|"
+    }
+  ],
+  "button": [
+    {
+      "id": "talk",
+      "font": "smaltextBlue",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 178],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_talkToAdria|",
+      "onClick": { "name": "load", "file": "towners/adria/panelTalk.json" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "buyItems",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 202],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_itemBuy|",
+      "onClick": [
+        { "name": "resource.ignore", "id": "userPanel", "ignore": true },
+        { "name": "resource.ignore", "id": "userPanelMain", "ignore": true },
+        { "name": "resource.add", "id": "userPanelBigFrame" },
+        { "name": "load", "file": "ui/level/panel/big.json" },
+        { "name": "load", "file": "towners/adria/buy/common.json" },
+        { "name": "load", "file": "towners/adria/buy/panel.json" }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "sellItems",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 226],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_itemSell|",
+      "onClick": [
+        { "name": "resource.ignore", "id": "userPanel", "ignore": true },
+        { "name": "resource.ignore", "id": "userPanelMain", "ignore": true },
+        { "name": "resource.add", "id": "userPanelBigFrame" },
+        { "name": "load", "file": "ui/level/panel/big.json" },
+        { "name": "load", "file": "towners/adria/sell/common.json" },
+        { "name": "load", "file": "towners/adria/sell/panel.json" }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "RechargeStaves",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 250],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_staffRecharge|",
+      "onClick": [
+        { "name": "resource.ignore", "id": "userPanel", "ignore": true },
+        { "name": "resource.ignore", "id": "userPanelMain", "ignore": true },
+        { "name": "resource.add", "id": "userPanelBigFrame" },
+        { "name": "load", "file": "ui/level/panel/big.json" },
+        { "name": "load", "file": "towners/adria/recharge/common.json" },
+        { "name": "load", "file": "towners/adria/recharge/panel.json" }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "back",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 274],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_leaveAdria|",
+      "onClick": { "name": "resource.popAll", "id": "userPanel" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    }
+  ],
+  "action.update": [
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

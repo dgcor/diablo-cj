@@ -1,0 +1,190 @@
+{
+  "replaceVars": true,
+  "action": [
+    { "name": "resource.add", "id": "singlePlayerNewHero" },
+    { "name": "text.setText", "id": "label2", "text": "|str_chooseClass|" },
+    { "name": "image.setTexture", "id": "heros", "texturePack": "heros", "index": 0 },
+    { "name": "text.setText", "id": "txtLevel", "text": "1" },
+    { "name": "text.setText", "id": "txtStrength", "text": "30" },
+    { "name": "text.setText", "id": "txtMagic", "text": "10" },
+    { "name": "text.setText", "id": "txtDexterity", "text": "20" },
+    { "name": "text.setText", "id": "txtVitality", "text": "25" },
+    { "name": "variable.set", "key": "charClass", "value": "Warrior" }
+  ],
+  "animation": [
+    {
+      "id": "pent1",
+      "texturePack": "focus16",
+      "position": [263, 258],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "id": "pent2",
+      "texturePack": "focus16",
+      "position": [566, 258],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "button": [
+    {
+      "id": "warrior",
+      "horizontalAlign": "center",
+      "font": "font24g",
+      "position": [424, 256],
+      "anchor": "none",
+      "onClick": [
+        "focusSound",
+        { "name": "variable.set", "key": "charClass", "value": "Warrior" },
+        { "name": "load", "file": "ui/singlePlayer/setPlayerImage.json" },
+        { "name": "text.setText", "id": "txtLevel", "text": "1" },
+        { "name": "text.setText", "id": "txtStrength", "text": "30" },
+        { "name": "text.setText", "id": "txtMagic", "text": "10" },
+        { "name": "text.setText", "id": "txtDexterity", "text": "20" },
+        { "name": "text.setText", "id": "txtVitality", "text": "25" },
+        "anchorPentagrams"
+      ],
+      "onFocus": { "name": "button.click", "id": "warrior" },
+      "focusOnClick": false,
+      "focus": true,
+      "text": "|str_warrior|"
+    },
+    {
+      "id": "rogue",
+      "horizontalAlign": "center",
+      "font": "font24g",
+      "position": [425, 282],
+      "anchor": "none",
+      "onClick": [
+        "focusSound",
+        { "name": "variable.set", "key": "charClass", "value": "Rogue" },
+        { "name": "load", "file": "ui/singlePlayer/setPlayerImage.json" },
+        { "name": "text.setText", "id": "txtLevel", "text": "1" },
+        { "name": "text.setText", "id": "txtStrength", "text": "20" },
+        { "name": "text.setText", "id": "txtMagic", "text": "15" },
+        { "name": "text.setText", "id": "txtDexterity", "text": "30" },
+        { "name": "text.setText", "id": "txtVitality", "text": "20" },
+        "anchorPentagrams"
+      ],
+      "onFocus": { "name": "button.click", "id": "rogue" },
+      "focusOnClick": false,
+      "focus": true,
+      "text": "|str_rogue|"
+    },
+    {
+      "id": "sorcerer",
+      "horizontalAlign": "center",
+      "font": "font24g",
+      "position": [424, 308],
+      "anchor": "none",
+      "onClick": [
+        "focusSound",
+        { "name": "variable.set", "key": "charClass", "value": "Sorceror" },
+        { "name": "load", "file": "ui/singlePlayer/setPlayerImage.json" },
+        { "name": "text.setText", "id": "txtLevel", "text": "1" },
+        { "name": "text.setText", "id": "txtStrength", "text": "15" },
+        { "name": "text.setText", "id": "txtMagic", "text": "35" },
+        { "name": "text.setText", "id": "txtDexterity", "text": "15" },
+        { "name": "text.setText", "id": "txtVitality", "text": "20" },
+        "anchorPentagrams"
+      ],
+      "onFocus": { "name": "button.click", "id": "sorcerer" },
+      "focusOnClick": false,
+      "focus": true,
+      "text": "|str_sorcerer|"
+    },
+    {
+      "id": "monk",
+      "horizontalAlign": "center",
+      "font": "font24g",
+      "position": [424, 334],
+      "anchor": "none",
+      "onClick": [
+        "focusSound",
+        { "name": "variable.set", "key": "charClass", "value": "Monk" },
+        { "name": "load", "file": "ui/singlePlayer/setPlayerImage.json" },
+        { "name": "text.setText", "id": "txtLevel", "text": "1" },
+        { "name": "text.setText", "id": "txtStrength", "text": "25" },
+        { "name": "text.setText", "id": "txtMagic", "text": "15" },
+        { "name": "text.setText", "id": "txtDexterity", "text": "25" },
+        { "name": "text.setText", "id": "txtVitality", "text": "20" },
+        "anchorPentagrams"
+      ],
+      "onFocus": { "name": "button.click", "id": "monk" },
+      "focusOnClick": false,
+      "focus": true,
+      "text": "|str_monk|"
+    },
+    {
+      "id": "bard",
+      "horizontalAlign": "center",
+      "font": "font24g",
+      "position": [424, 363],
+      "anchor": "none",
+      "onClick": [
+        "focusSound",
+        { "name": "variable.set", "key": "charClass", "value": "Bard" },
+        { "name": "load", "file": "ui/singlePlayer/setPlayerImage.json" },
+        { "name": "text.setText", "id": "txtLevel", "text": "1" },
+        { "name": "text.setText", "id": "txtStrength", "text": "20" },
+        { "name": "text.setText", "id": "txtMagic", "text": "20" },
+        { "name": "text.setText", "id": "txtDexterity", "text": "25" },
+        { "name": "text.setText", "id": "txtVitality", "text": "20" },
+        "anchorPentagrams"
+      ],
+      "onFocus": { "name": "button.click", "id": "bard" },
+      "focusOnClick": false,
+      "focus": true,
+      "text": "|str_bard|"
+    },
+    {
+      "id": "barbarian",
+      "horizontalAlign": "center",
+      "font": "font24g",
+      "position": [424, 387],
+      "anchor": "none",
+      "onClick": [
+        "focusSound",
+        { "name": "variable.set", "key": "charClass", "value": "Barbarian" },
+        { "name": "load", "file": "ui/singlePlayer/setPlayerImage.json" },
+        { "name": "text.setText", "id": "txtLevel", "text": "1" },
+        { "name": "text.setText", "id": "txtStrength", "text": "40" },
+        { "name": "text.setText", "id": "txtMagic", "text": "0" },
+        { "name": "text.setText", "id": "txtDexterity", "text": "20" },
+        { "name": "text.setText", "id": "txtVitality", "text": "25" },
+        "anchorPentagrams"
+      ],
+      "onFocus": { "name": "button.click", "id": "barbarian" },
+      "focusOnClick": false,
+      "focus": true,
+      "text": "|str_barbarian|"
+    },
+    {
+      "id": "ok",
+      "font": "font30g",
+      "position": [329, 429],
+      "anchor": "none",
+      "onClick": [
+        { "name": "resource.pop" },
+        { "name": "load", "file": "ui/singlePlayer/newName.json" }
+      ],
+      "sound": "titlslct",
+      "text": "|str_ok|"
+    },
+    {
+      "id": "cancel",
+      "font": "font30g",
+      "position": [451, 429],
+      "anchor": "none",
+      "onClick": [
+        { "name": "resource.pop" },
+        { "name": "resource.pop" },
+        { "name": "load", "file": "ui/singlePlayer/select.json" }
+      ],
+      "sound": "titlslct",
+      "text": "|str_cancel|"
+    }
+  ],
+  "action.update": "anchorPentagrams"
+}

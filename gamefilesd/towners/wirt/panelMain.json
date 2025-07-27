@@ -1,0 +1,135 @@
+{
+  "action": {
+    "name": "resource.add",
+    "id": "userPanelMain"
+  },
+  "animation": [
+    {
+      "texturePack": "pentspn2",
+      "id": "pent1",
+      "position": [67, 140],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "texturePack": "pentspn2",
+      "id": "pent2",
+      "position": [537, 140],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "replaceVars": true,
+  "text": [
+    {
+      "id": "panelTitle1",
+      "font": "smaltextGold",
+      "position": [480, 58],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_titleWirt|"
+    },
+    {
+      "id": "panelText1",
+      "font": "smaltextGold",
+      "position": [480, 178],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_wirtItemInfo|"
+    },
+    {
+      "id": "panelText2",
+      "replaceVars": true,
+      "font": "smaltextGold",
+      "position": [480, 202],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "binding": "%WirtSeePrice%",
+      "bindingFlags": "once",
+      "format": "|str_wirtItemInfo2|"
+    },
+    {
+      "id": "panelText3",
+      "font": "smaltextGold",
+      "position": [476, 226],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_wirtItemInfo3|"
+    }
+  ],
+  "button": [
+    {
+      "id": "talk",
+      "font": "smaltextBlue",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 130],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_talkToWirt|",
+      "onClick": { "name": "load", "file": "towners/wirt/panelTalk.json" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "ShowItem",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 250],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_wirtItemShow|",
+      "onClick": { "name": "load", "file": "towners/wirt/buy/showItem.json" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "back",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [480, 274],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_sayGoodbye|",
+      "onClick": { "name": "resource.popAll", "id": "userPanel" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    }
+  ],
+  "action": [
+    {
+      "name": "if.equal",
+      "param1": "%currentLevel.player.wirt.hasItem.0.0%",
+      "param2": true,
+      "else": [
+        { "name": "drawable.visible", "id": "panelText1", "visible": false },
+        { "name": "drawable.visible", "id": "panelText2", "visible": false },
+        { "name": "drawable.visible", "id": "panelText3", "visible": false },
+        { "name": "drawable.visible", "id": "ShowItem", "visible": false },
+        { "name": "button.enable", "id": "ShowItem", "enable": false },
+        { "name": "drawable.addPositionOffset", "id": "talk", "offset": [0, 48] },
+        { "name": "drawable.addPositionOffset", "id": "back", "offset": [0, -24] }
+      ]
+    },
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

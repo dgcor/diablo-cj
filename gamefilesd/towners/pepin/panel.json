@@ -1,0 +1,5 @@
+{
+  "load.panel": "towners/common/loadPanel.json",
+  "load.panelMain": "towners/pepin/panelMain.json",
+  "action": { "name": "sound.play", "id": "healerWelcome" }
+}

@@ -1,0 +1,34 @@
+{
+  "font": [
+    {
+      "id": "smaltext",
+      "fromId": "font16g"
+    },
+    {
+      "id": "smaltextBlue",
+      "clone": "font16g",
+      "replaceVars": true,
+      "fontColor": "|textBlue|"
+    },
+    {
+      "id": "smaltextGold",
+      "clone": "font16g",
+      "replaceVars": true,
+      "fontColor": "|textGold|"
+    },
+    {
+      "id": "smaltextRed",
+      "clone": "font16g",
+      "replaceVars": true,
+      "fontColor": "|textRed|"
+    },
+    {
+      "id": "medtexts",
+      "fromId": "font16g"
+    },
+    {
+      "id": "bigtgold",
+      "fromId": "font16g"
+    }
+  ]
+}

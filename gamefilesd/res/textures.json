@@ -1,0 +1,48 @@
+{
+  "texture": [
+    {
+      "id": "background",
+      "color": "0x000000",
+      "size": [1, 1]
+    },
+    {
+      "id": "empty",
+      "color": "0x00000000",
+      "size": [1, 1]
+    },
+    {
+      "id": "textWallBackground",
+      "color": [
+        "0x000000FF", "0x00000000",
+        "0x00000000", "0x000000FF"
+      ],
+      "size": [2, 2]
+    }
+  ],
+  "action": {
+    "name": "if.equal",
+    "param1": "%beta%",
+    "param2": true,
+    "then": {
+      "name": "loadJson",
+      "json": {
+        "texture": {
+          "id": "cursor",
+          "file": "data/inv/objcurs.cel",
+          "frame": 0,
+          "palette": "town"
+        }
+      }
+    },
+    "else": {
+      "name": "loadJson",
+      "json": {
+        "texture": {
+          "id": "cursor",
+          "file": "ui_art/cursor.pcx",
+          "mask": "0x000000"
+        }
+      }
+    }
+  }
+}

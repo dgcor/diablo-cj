@@ -1,0 +1,305 @@
+{
+  "classifier": [
+    {
+      "id": "armorPrefixes",
+      "values": [
+        {
+          "property": "toDamage",
+          "value": [
+            { "min": "min", "max": -80, "value": "Useless" },
+            { "min": -79, "max": -45, "value": "Bent" },
+            { "min": -44, "max": -25, "value": "Weak" },
+            { "min": 20, "max": 35, "value": "Jagged" },
+            { "min": 36, "max": 50, "value": "Deadly" },
+            { "min": 51, "max": 65, "value": "Heavy" },
+            { "min": 66, "max": 80, "value": "Vicious" },
+            { "min": 81, "max": 95, "value": "Brutal" },
+            { "min": 96, "max": 110, "value": "Massive" },
+            { "min": 111, "max": 125, "value": "Savage" },
+            { "min": 126, "max": 150, "value": "Ruthless" },
+            { "min": 151, "max": "max", "value": "Merciless" }
+          ]
+        },
+        {
+          "property": "toHit",
+          "value": [
+            { "min": "min", "max": -6, "value": "Tin" },
+            { "min": -5, "max": -1, "value": "Brass" },
+            { "min": 1, "max": 5, "value": "Bronze" },
+            { "min": 6, "max": 10, "value": "Iron" },
+            { "min": 11, "max": 15, "value": "Steel" },
+            { "min": 16, "max": 20, "value": "Silver" },
+            { "min": 21, "max": 30, "value": "Gold" },
+            { "min": 31, "max": 40, "value": "Platinum" },
+            { "min": 41, "max": 60, "value": "Mithril" },
+            { "min": 61, "max": 80, "value": "Meteoric" },
+            { "min": 81, "max": 100, "value": "Weird" },
+            { "min": 101, "max": "max", "value": "Strange" }
+          ]
+        },
+        {
+          "property": "toArmor",
+          "value": [
+            { "min": "min", "max": -51, "value": "Vulnerable" },
+            { "min": -50, "max": -25, "value": "Rusted" },
+            { "min": 20, "max": 30, "value": "Fine" },
+            { "min": 31, "max": 40, "value": "Strong" },
+            { "min": 41, "max": 55, "value": "Grand" },
+            { "min": 56, "max": 70, "value": "Valiant" },
+            { "min": 71, "max": 90, "value": "Glorious" },
+            { "min": 91, "max": 110, "value": "Blessed" },
+            { "min": 111, "max": 130, "value": "Saintly" },
+            { "min": 131, "max": 150, "value": "Awesome" },
+            { "min": 151, "max": 170, "value": "Holy" },
+            { "min": 171, "max": "max", "value": "Godly" }
+          ]
+        },
+        {
+          "property": "resistAll",
+          "value": [
+            { "min": 10, "max": 15, "value": "Topaz" },
+            { "min": 16, "max": 20, "value": "Amber" },
+            { "min": 21, "max": 30, "value": "Jade" },
+            { "min": 31, "max": 40, "value": "Obsidian" },
+            { "min": 41, "max": "max", "value": "Emerald" }
+          ]
+        },
+        {
+          "property": "resistMagic",
+          "value": [
+            { "min": 10, "max": 20, "value": "White" },
+            { "min": 21, "max": 30, "value": "Pearl" },
+            { "min": 31, "max": 40, "value": "Ivory" },
+            { "min": 41, "max": 50, "value": "Crystal" },
+            { "min": 51, "max": "max", "value": "Diamond" }
+          ]
+        },
+        {
+          "property": "resistFire",
+          "value": [
+            { "min": 10, "max": 20, "value": "Red" },
+            { "min": 21, "max": 30, "value": "Crimson" },
+            { "min": 31, "max": 40, "value": "Crimson" },
+            { "min": 41, "max": 50, "value": "Garnet" },
+            { "min": 51, "max": "max", "value": "Ruby" }
+          ]
+        },
+        {
+          "property": "resistLightning",
+          "value": [
+            { "min": 10, "max": 20, "value": "Blue" },
+            { "min": 21, "max": 30, "value": "Azure" },
+            { "min": 31, "max": 40, "value": "Lapis" },
+            { "min": 41, "max": 50, "value": "Cobalt" },
+            { "min": 51, "max": "max", "value": "Sapphire" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goldPrefix",
+      "values": "%quantity%"
+    },
+    {
+      "id": "weaponPrefixes",
+      "values": [
+        {
+          "property": "toDamage",
+          "value": [
+            { "min": "min", "max": -80, "value": "Useless" },
+            { "min": -79, "max": -45, "value": "Bent" },
+            { "min": -44, "max": -25, "value": "Weak" },
+            { "min": 20, "max": 35, "value": "Jagged" },
+            { "min": 36, "max": 50, "value": "Deadly" },
+            { "min": 51, "max": 65, "value": "Heavy" },
+            { "min": 66, "max": 80, "value": "Vicious" },
+            { "min": 81, "max": 95, "value": "Brutal" },
+            { "min": 96, "max": 110, "value": "Massive" },
+            { "min": 111, "max": 125, "value": "Savage" },
+            { "min": 126, "max": 150, "value": "Ruthless" },
+            { "min": 151, "max": "max", "value": "Merciless" }
+          ]
+        },
+        {
+          "property": "toHit",
+          "value": [
+            { "min": "min", "max": -6, "value": "Tin" },
+            { "min": -5, "max": -1, "value": "Brass" },
+            { "min": 1, "max": 5, "value": "Bronze" },
+            { "min": 6, "max": 10, "value": "Iron" },
+            { "min": 11, "max": 15, "value": "Steel" },
+            { "min": 16, "max": 20, "value": "Silver" },
+            { "min": 21, "max": 30, "value": "Gold" },
+            { "min": 31, "max": 40, "value": "Platinum" },
+            { "min": 41, "max": 60, "value": "Mithril" },
+            { "min": 61, "max": 80, "value": "Meteoric" },
+            { "min": 81, "max": 100, "value": "Weird" },
+            { "min": 101, "max": "max", "value": "Strange" }
+          ]
+        },
+        {
+          "property": "toHit",
+          "value": [
+            { "min": "min", "max": -6, "value": "Clumsy" },
+            { "min": -5, "max": -1, "value": "Dull" },
+            { "min": 1, "max": 5, "value": "Sharp" },
+            { "min": 6, "max": 10, "value": "Fine" },
+            { "min": 11, "max": 15, "value": "Warrior's" },
+            { "min": 16, "max": 20, "value": "Soldier's" },
+            { "min": 21, "max": 30, "value": "Lord's" },
+            { "min": 31, "max": 40, "value": "Knight's" },
+            { "min": 41, "max": 50, "value": "Master's" },
+            { "min": 51, "max": 75, "value": "Champion's" },
+            { "min": 76, "max": "max", "value": "King's" }
+          ]
+        },
+        {
+          "property": "resistAll",
+          "value": [
+            { "min": 10, "max": 15, "value": "Topaz" },
+            { "min": 16, "max": 20, "value": "Amber" },
+            { "min": 21, "max": 30, "value": "Jade" },
+            { "min": 31, "max": 40, "value": "Obsidian" },
+            { "min": 41, "max": "max", "value": "Emerald" }
+          ]
+        },
+        {
+          "property": "resistMagic",
+          "value": [
+            { "min": 10, "max": 20, "value": "White" },
+            { "min": 21, "max": 30, "value": "Pearl" },
+            { "min": 31, "max": 40, "value": "Ivory" },
+            { "min": 41, "max": 50, "value": "Crystal" },
+            { "min": 51, "max": "max", "value": "Diamond" }
+          ]
+        },
+        {
+          "property": "resistFire",
+          "value": [
+            { "min": 10, "max": 20, "value": "Red" },
+            { "min": 21, "max": 30, "value": "Crimson" },
+            { "min": 31, "max": 40, "value": "Crimson" },
+            { "min": 41, "max": 50, "value": "Garnet" },
+            { "min": 51, "max": "max", "value": "Ruby" }
+          ]
+        },
+        {
+          "property": "resistLightning",
+          "value": [
+            { "min": 10, "max": 20, "value": "Blue" },
+            { "min": 21, "max": 30, "value": "Azure" },
+            { "min": 31, "max": 40, "value": "Lapis" },
+            { "min": 41, "max": 50, "value": "Cobalt" },
+            { "min": 51, "max": "max", "value": "Sapphire" }
+          ]
+        },
+        {
+          "property": "mana",
+          "value": [
+            { "min": "min", "max": -11, "value": "Hyena's" },
+            { "min": -10, "max": -1, "value": "Frog's" },
+            { "min": 10, "max": 15, "value": "Spider's" },
+            { "min": 16, "max": 20, "value": "Raven's" },
+            { "min": 21, "max": 30, "value": "Snake's" },
+            { "min": 31, "max": 40, "value": "Serpent's" },
+            { "min": 41, "max": 50, "value": "Drake's" },
+            { "min": 51, "max": 60, "value": "Dragon's" },
+            { "min": 61, "max": 80, "value": "Wyrm's" },
+            { "min": 81, "max": "max", "value": "Hydra's" }
+          ]
+        },
+        {
+          "property": "toCharges",
+          "value": [
+            { "min": 2, "max": 2, "value": "Plentiful" },
+            { "min": 3, "max": "max", "value": "Bountiful" }
+          ]
+        },
+        {
+          "property": "toSpells",
+          "value": [
+            { "min": 1, "max": 1, "value": "Angel's" },
+            { "min": 2, "max": "max", "value": "Arch-Angel's" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jewelleryPrefixes",
+      "values": [
+        {
+          "property": "toHit",
+          "value": [
+            { "min": "min", "max": -6, "value": "Tin" },
+            { "min": -5, "max": -1, "value": "Brass" },
+            { "min": 1, "max": 5, "value": "Bronze" },
+            { "min": 6, "max": 10, "value": "Iron" },
+            { "min": 11, "max": 15, "value": "Steel" },
+            { "min": 16, "max": 20, "value": "Silver" },
+            { "min": 21, "max": 30, "value": "Gold" },
+            { "min": 31, "max": 40, "value": "Platinum" },
+            { "min": 41, "max": 60, "value": "Mithril" },
+            { "min": 61, "max": 80, "value": "Meteoric" },
+            { "min": 81, "max": 100, "value": "Weird" },
+            { "min": 101, "max": "max", "value": "Strange" }
+          ]
+        },
+        {
+          "property": "resistAll",
+          "value": [
+            { "min": 10, "max": 15, "value": "Topaz" },
+            { "min": 16, "max": 20, "value": "Amber" },
+            { "min": 21, "max": 30, "value": "Jade" },
+            { "min": 31, "max": 40, "value": "Obsidian" },
+            { "min": 41, "max": "max", "value": "Emerald" }
+          ]
+        },
+        {
+          "property": "resistMagic",
+          "value": [
+            { "min": 10, "max": 20, "value": "White" },
+            { "min": 21, "max": 30, "value": "Pearl" },
+            { "min": 31, "max": 40, "value": "Ivory" },
+            { "min": 41, "max": 50, "value": "Crystal" },
+            { "min": 51, "max": "max", "value": "Diamond" }
+          ]
+        },
+        {
+          "property": "resistFire",
+          "value": [
+            { "min": 10, "max": 20, "value": "Red" },
+            { "min": 21, "max": 30, "value": "Crimson" },
+            { "min": 31, "max": 40, "value": "Crimson" },
+            { "min": 41, "max": 50, "value": "Garnet" },
+            { "min": 51, "max": "max", "value": "Ruby" }
+          ]
+        },
+        {
+          "property": "resistLightning",
+          "value": [
+            { "min": 10, "max": 20, "value": "Blue" },
+            { "min": 21, "max": 30, "value": "Azure" },
+            { "min": 31, "max": 40, "value": "Lapis" },
+            { "min": 41, "max": 50, "value": "Cobalt" },
+            { "min": 51, "max": "max", "value": "Sapphire" }
+          ]
+        },
+        {
+          "property": "mana",
+          "value": [
+            { "min": "min", "max": -11, "value": "Hyena's" },
+            { "min": -10, "max": -1, "value": "Frog's" },
+            { "min": 10, "max": 15, "value": "Spider's" },
+            { "min": 16, "max": 20, "value": "Raven's" },
+            { "min": 21, "max": 30, "value": "Snake's" },
+            { "min": 31, "max": 40, "value": "Serpent's" },
+            { "min": 41, "max": 50, "value": "Drake's" },
+            { "min": 51, "max": 60, "value": "Dragon's" },
+            { "min": 61, "max": 80, "value": "Wyrm's" },
+            { "min": 81, "max": "max", "value": "Hydra's" }
+          ]
+        }
+      ]
+    }
+  ]
+}

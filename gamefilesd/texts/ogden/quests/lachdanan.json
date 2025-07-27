@@ -1,0 +1,13 @@
+{
+  "load": [
+    "ui/level/showText.json",
+    "questText",
+    "25",
+    "lang/%lang%/texts/ogden/quests/lachdanan.txt"
+  ],
+  "audio": {
+    "file": "sfx/Towners/tavown11.wav",
+    "play": true,
+    "volume": "%game.soundVolume%"
+  }
+}

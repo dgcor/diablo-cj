@@ -1,0 +1,139 @@
+{
+  "action": [
+    { "name": "resource.add", "id": "userPanelBuy" },
+    {
+      "name": "action.set",
+      "id": "mainMenu.moveScrollbar",
+      "action": [
+        {
+          "name": "menu.moveScrollbar",
+          "idMenu": "mainMenu",
+          "idScrollbar": "sb_thumb",
+          "idAnchorTo": "btnDrag",
+          "range": 180
+        },
+        {
+          "name": "menu.setIndex",
+          "id": "menuPrices",
+          "index": "%mainMenu.currentIdx%"
+        }
+      ]
+    },
+    {
+      "name": "action.set",
+      "id": "anchorLeftPentagram",
+      "action": {
+        "name": "drawable.verticalAnchorToFocused",
+        "id": "pent1"
+      }
+    },
+    {
+      "name": "action.set",
+      "id": "anchorRightPentagram",
+      "action": {
+        "name": "drawable.verticalAnchorToFocused",
+        "id": "pent2"
+      }
+    }
+  ],
+  "animation": [
+    {
+      "texturePack": "pentspn2",
+      "id": "pent1",
+      "position": [32, 94],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "texturePack": "pentspn2",
+      "id": "pent2",
+      "position": [575, 94],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "menu": {
+    "id": "mainMenu",
+    "font": "smaltext",
+    "sound": "titlslct",
+    "position": [52, 94],
+    "horizontalSpaceOffset": 1,
+    "verticalSpaceOffset": 2,
+    "anchor": "none",
+    "focus": true,
+    "focusOnClick": false,
+    "focusSound": "titlemov",
+    "visibleItems": 4,
+    "size": [518, 186],
+    "verticalPad": 14,
+    "onScrollDown": "focus.moveDown",
+    "onScrollUp": "focus.moveUp",
+    "items": {
+      "load": "currentLevel.adria.inventory.0",
+      "text": "%name%\n",
+      "onClick": {
+        "name": "load",
+        "file": ["towners/adria/buy/confirm.json", 0, "!listIdx!"]
+      },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram",
+        "mainMenu.moveScrollbar"
+      ],
+      "executeAction": [
+        {
+          "name": "variable.set",
+          "values": {
+            "itemOwnerId": "adria",
+            "itemInv": 0,
+            "itemIndex": "!listIdx!",
+            "menuIndex": "!menuIdx!"
+          }
+        },
+        "setMenuItemText"
+      ]
+    }
+  },
+  "replaceVars": true,
+  "button": {
+    "id": "back",
+    "font": "smaltext",
+    "sound": "titlslct",
+    "position": [320, 304],
+    "anchor": "none",
+    "horizontalAlign": "center",
+    "horizontalSpaceOffset": 1,
+    "text": "|str_back|",
+    "onClick": [
+      { "name": "resource.popAll", "id": "userPanelBigFrame" },
+      { "name": "resource.ignore", "id": "userPanel", "ignore": false }
+    ],
+    "onFocus": [
+      "anchorLeftPentagram",
+      "anchorRightPentagram"
+    ]
+  },
+  "action.update": {
+    "name": "if.notEqual",
+    "param1": "%mainMenu.itemCount%",
+    "param2": 0,
+    "then": [
+      {
+        "name": "text.setText",
+        "id": "panelTitle",
+        "binding": "%currentLevel.currentPlayer.itemQuantity.gold%",
+        "format": "|str_itemsInfoForSale|"
+      },
+      { "name": "load", "file": "towners/adria/buy/listItems.json" }
+    ],
+    "else": [
+      {
+        "name": "text.setText",
+        "id": "panelTitle",
+        "binding": "%currentLevel.currentPlayer.itemQuantity.gold%",
+        "format": "|str_itemsInfoForSaleNone|"
+      },
+      { "name": "load", "file": "towners/adria/buy/noItems.json" }
+    ]
+  }
+}

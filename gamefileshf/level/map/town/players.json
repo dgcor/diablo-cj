@@ -1,0 +1,6 @@
+{
+  "load": "level/map/town/playerTextureFiles.json",
+  "load": "level/map/town/playerTextureFileshf.json",
+  "load": "level/map/town/playerClasses.json",
+  "load": "level/map/town/playerClasseshf.json"
+}

@@ -1,0 +1,222 @@
+{
+  "itemClass": [
+    {
+      "id": "rags",
+      "fromId": "baseArmor",
+      "dropTexturePack": "larmor",
+      "inventoryTextureIndex": 139,
+      "name": "Rags",
+      "shortName": "Rags",
+      "type": "Armor",
+      "defaults": {
+        "basePrice": 5,
+        "armor": 6,
+        "durability": 6,
+        "durabilityMax": 6
+      },
+      "inventorySize": [2, 3]
+    },
+    {
+      "id": "cape",
+      "fromId": "rags",
+      "inventoryTextureIndex": 161,
+      "name": "Cape",
+      "shortName": "Cape",
+      "defaults": {
+        "basePrice": 10,
+        "armor": 5,
+        "durability": 12,
+        "durabilityMax": 12
+      }
+    },
+    {
+      "id": "cloak",
+      "fromId": "rags",
+      "inventoryTextureIndex": 160,
+      "name": "Cloak",
+      "shortName": "Cloak",
+      "defaults": {
+        "basePrice": 40,
+        "armor": 7,
+        "durability": 18,
+        "durabilityMax": 18
+      }
+    },
+    {
+      "id": "robe",
+      "fromId": "rags",
+      "inventoryTextureIndex": 148,
+      "name": "Robe",
+      "shortName": "Robe",
+      "defaults": {
+        "basePrice": 75,
+        "armor": 7,
+        "durability": 24,
+        "durabilityMax": 24
+      }
+    },
+    {
+      "id": "quiltedArmor",
+      "fromId": "rags",
+      "inventoryTextureIndex": 140,
+      "name": "Quilted Armor",
+      "shortName": "Armor",
+      "subType": "Leather",
+      "defaults": {
+        "basePrice": 200,
+        "armor": 10,
+        "durability": 30,
+        "durabilityMax": 30
+      }
+    },
+    {
+      "id": "leatherArmor",
+      "fromId": "quiltedArmor",
+      "inventoryTextureIndex": 146,
+      "name": "Leather Armor",
+      "defaults": {
+        "basePrice": 300,
+        "armor": 13,
+        "durability": 35,
+        "durabilityMax": 35
+      }
+    },
+    {
+      "id": "hardLeatherArmor",
+      "fromId": "quiltedArmor",
+      "inventoryTextureIndex": 138,
+      "name": "Hard Leather Armor",
+      "defaults": {
+        "basePrice": 450,
+        "armor": 14,
+        "durability": 40,
+        "durabilityMax": 40
+      }
+    },
+    {
+      "id": "studdedLeatherArmor",
+      "fromId": "quiltedArmor",
+      "inventoryTextureIndex": 118,
+      "name": "Studded Leather Armor",
+      "defaults": {
+        "basePrice": 700,
+        "armor": 17,
+        "durability": 45,
+        "durabilityMax": 45,
+        "requiredStrength": 20
+      }
+    },
+    {
+      "id": "ringMail",
+      "fromId": "quiltedArmor",
+      "dropTexturePack": "FPlateAr",
+      "inventoryTextureIndex": 165,
+      "name": "Ring Mail",
+      "shortName": "Mail",
+      "subType": "Plate",
+      "defaults": {
+        "basePrice": 900,
+        "armor": 20,
+        "durability": 50,
+        "durabilityMax": 50,
+        "requiredStrength": 25
+      },
+      "actions": {
+        "levelDrop": { "name": "sound.play", "id": "flipharm" },
+        "inventoryDrop": { "name": "sound.play", "id": "invharm" }
+      }
+    },
+    {
+      "id": "chainMail",
+      "fromId": "ringMail",
+      "inventoryTextureIndex": 122,
+      "name": "Chain Mail",
+      "defaults": {
+        "basePrice": 1250,
+        "armor": 22,
+        "durability": 55,
+        "durabilityMax": 55,
+        "requiredStrength": 30
+      }
+    },
+    {
+      "id": "scaleMail",
+      "fromId": "ringMail",
+      "inventoryTextureIndex": 125,
+      "name": "Scale Mail",
+      "defaults": {
+        "basePrice": 2300,
+        "armor": 22,
+        "durability": 55,
+        "durabilityMax": 55,
+        "requiredStrength": 30
+      }
+    },
+    {
+      "id": "breastPlate",
+      "fromId": "ringMail",
+      "inventoryTextureIndex": 164,
+      "name": "Breast Plate",
+      "shortName": "Plate",
+      "defaults": {
+        "basePrice": 2800,
+        "armor": 24,
+        "durability": 80,
+        "durabilityMax": 80,
+        "requiredStrength": 40
+      }
+    },
+    {
+      "id": "splintMail",
+      "fromId": "ringMail",
+      "inventoryTextureIndex": 147,
+      "name": "Splint Mail",
+      "defaults": {
+        "basePrice": 3250,
+        "armor": 35,
+        "durability": 65,
+        "durabilityMax": 65,
+        "requiredStrength": 40
+      }
+    },
+    {
+      "id": "fieldPlate",
+      "fromId": "breastPlate",
+      "inventoryTextureIndex": 114,
+      "name": "Field Plate",
+      "defaults": {
+        "basePrice": 5800,
+        "armor": 45,
+        "durability": 80,
+        "durabilityMax": 80,
+        "requiredStrength": 65
+      }
+    },
+    {
+      "id": "gothicPlate",
+      "fromId": "breastPlate",
+      "inventoryTextureIndex": 163,
+      "name": "Gothic Plate",
+      "defaults": {
+        "basePrice": 8000,
+        "armor": 60,
+        "durability": 100,
+        "durabilityMax": 100,
+        "requiredStrength": 80
+      }
+    },
+    {
+      "id": "fullPlateMail",
+      "fromId": "breastPlate",
+      "inventoryTextureIndex": 162,
+      "name": "Full Plate Mail",
+      "defaults": {
+        "basePrice": 6500,
+        "armor": 75,
+        "durability": 90,
+        "durabilityMax": 90,
+        "requiredStrength": 90
+      }
+    }
+  ]
+}

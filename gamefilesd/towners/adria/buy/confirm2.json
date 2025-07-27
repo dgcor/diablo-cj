@@ -1,0 +1,126 @@
+{
+  "action": [
+    { "name": "resource.add", "id": "userPanelConfirm", "ignorePrevious": true },
+    { "name": "load", "file": "ui/level/panel/big/upperSeparator.json" },
+    {
+      "name": "action.set",
+      "id": "anchorLeftPentagram",
+      "action": "anchorLeftPentagram2"
+    },
+    {
+      "name": "action.set",
+      "id": "anchorRightPentagram",
+      "action": "anchorRightPentagram2"
+    }
+  ],
+  "animation": [
+    {
+      "texturePack": "pentspn2",
+      "id": "pent1",
+      "position": [32, 94],
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "texturePack": "pentspn2",
+      "id": "pent2",
+      "position": [575, 94],
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "replaceVars": true,
+  "text": [
+    {
+      "id": "itemInfo",
+      "font": "smaltext",
+      "position": [52, 130],
+      "anchor": "none",
+      "horizontalSpaceOffset": 1,
+      "verticalSpaceOffset": 2
+    },
+    {
+      "id": "itemPrice",
+      "font": "smaltext",
+      "position": [571, 130],
+      "anchor": "none",
+      "horizontalAlign": "right",
+      "horizontalSpaceOffset": 1
+    },
+    {
+      "id": "confirm",
+      "font": "smaltext",
+      "position": [320, 214],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_confirmBuy|"
+    }
+  ],
+  "button": [
+    {
+      "id": "yes",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [320, 250],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_yes|",
+      "onClick": [
+        {
+          "name": "player.removeItemQuantity",
+          "itemClass": "gold",
+          "value": "%currentLevel.player.adria.item.{1}.{2}.price%"
+        },
+        {
+          "name": "item.trade",
+          "item": { "player": "adria", "inventory": {1}, "item": {2} },
+          "position": "BottomLeft",
+          "onInventoryFull": "inventoryFull"
+        },
+        "updateBeltItems",
+        { "name": "resource.popAll", "id": "userPanelBuy" },
+        { "name": "load", "file": "towners/adria/buy/panel.json" }
+      ],
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    },
+    {
+      "id": "back",
+      "font": "smaltext",
+      "sound": "titlslct",
+      "focus": true,
+      "focusSound": "titlemov",
+      "position": [320, 274],
+      "anchor": "none",
+      "horizontalAlign": "center",
+      "horizontalSpaceOffset": 1,
+      "text": "|str_no|",
+      "onClick": { "name": "resource.popAll", "id": "userPanelConfirm" },
+      "onFocus": [
+        "anchorLeftPentagram",
+        "anchorRightPentagram"
+      ]
+    }
+  ],
+  "action.update": [
+    {
+      "name": "variable.set",
+      "values": {
+        "itemOwnerId": "adria",
+        "itemInv": {1},
+        "itemIndex": {2},
+        "itemPrice": "%currentLevel.player.adria.item.{1}.{2}.price%"
+      }
+    },
+    "setItemInfo",
+    "setPriceInfo",
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

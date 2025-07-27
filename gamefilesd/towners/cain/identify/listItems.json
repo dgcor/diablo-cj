@@ -1,0 +1,82 @@
+{
+  "load": "towners/common/loadScrollbarPanel.json",
+  "menu": {
+    "id": "menuPrices",
+    "replaceVars": true,
+    "font": "smaltext",
+    "sound": "titlslct",
+    "position": [571, 94],
+    "horizontalAlign": "right",
+    "horizontalSpaceOffset": 1,
+    "anchor": "none",
+    "focusOnClick": false,
+    "visibleItems": 4,
+    "verticalPad": 38,
+    "items": [
+      {
+        "load": "currentLevel.currentPlayer.inventory.body",
+        "exclude": {
+          "property": "identified",
+          "value": true
+        },
+        "text": "|identifyPrice|",
+        "executeAction": [
+          {
+            "name": "variable.set",
+            "values": {
+              "itemOwnerId": "hero",
+              "itemInv": 0,
+              "itemIndex": "!listIdx!",
+              "menuIndex": "!menuIdx!"
+            }
+          },
+          "setMenuPriceText"
+        ]
+      },
+      {
+        "load": "currentLevel.currentPlayer.inventory.belt",
+        "exclude": {
+          "property": "identified",
+          "value": true
+        },
+        "text": "|identifyPrice|",
+        "executeAction": [
+          {
+            "name": "variable.set",
+            "values": {
+              "itemOwnerId": "hero",
+              "itemInv": 1,
+              "itemIndex": "!listIdx!",
+              "menuIndex": "!menuIdx!"
+            }
+          },
+          "setMenuPriceText"
+        ]
+      },
+      {
+        "load": "currentLevel.currentPlayer.inventory.stash",
+        "exclude": {
+          "property": "identified",
+          "value": true
+        },
+        "text": "|identifyPrice|",
+        "executeAction": [
+          {
+            "name": "variable.set",
+            "values": {
+              "itemOwnerId": "hero",
+              "itemInv": 2,
+              "itemIndex": "!listIdx!",
+              "menuIndex": "!menuIdx!"
+            }
+          },
+          "setMenuPriceText"
+        ]
+      }
+    ]
+  },
+  "action": [
+    "anchorLeftPentagram",
+    "anchorRightPentagram"
+  ]
+}

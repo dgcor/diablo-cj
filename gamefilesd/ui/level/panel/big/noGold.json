@@ -1,0 +1,45 @@
+{
+  "action": { "name": "resource.add", "id": "panelBigNoGold" },
+  "animation": [
+    {
+      "id": "pent1",
+      "texturePack": "pentspn2",
+      "anchor": "none",
+      "refresh": 50
+    },
+    {
+      "id": "pent2",
+      "texturePack": "pentspn2",
+      "anchor": "none",
+      "refresh": 50
+    }
+  ],
+  "button": {
+    "replaceVars": true,
+    "id": "back",
+    "font": "smaltext",
+    "sound": "titlslct",
+    "position": [320, 202],
+    "anchor": "none",
+    "focus": true,
+    "horizontalAlign": "center",
+    "horizontalSpaceOffset": 1,
+    "text": "|str_notEnoughGold|"
+  },
+  "action.update": [
+    {
+      "name": "drawable.anchor",
+      "id": "pent1",
+      "idAnchor": "back",
+      "anchor": "left",
+      "offset": [-8, 1]
+    },
+    {
+      "name": "drawable.anchor",
+      "id": "pent2",
+      "idAnchor": "back",
+      "anchor": "right",
+      "offset": [5, 1]
+    }
+  ]
+}

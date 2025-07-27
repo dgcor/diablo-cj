@@ -1,0 +1,12 @@
+{
+  "imageContainer": {
+    "id": "{3}",
+    "file": "data/global/CHARS/{1}/{2}.dcc"
+  },
+  "texturePack": {
+    "id": "{3}",
+    "imageContainer": "{3}",
+    "palette": "units",
+    "normalizeDirections": true
+  }
+}

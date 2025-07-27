@@ -1,0 +1,27 @@
+{
+  "game": {
+    "icon": "res/icon.png"
+  },
+  "cursor": {
+    "show": false
+  },
+  "action": {
+    "name": "if.equal",
+    "param1": { "name": "file.exists", "file": "ui_art/cursor.pcx" },
+    "param2": true,
+    "else": { "name": "variable.set", "key": "beta", "value": true }
+  },
+  "load.setupTempFolder": "level/setupTempFolder.json",
+  "load.actions": "res/actions.json",
+  "game.actions": {
+    "onClose": "saveSettingsAndClose"
+  },
+  "load.palettes": "res/palettes.json",
+  "load.fonts": "res/fonts.json",
+  "load.music": "res/music.json",
+  "load.sounds": "res/sounds.json",
+  "load.textures": "res/textures.json",
+  "load.gameInputEvents": "ui/gameInputEvents.json",
+  "load.inputEvents": "ui/inputEvents.json",
+  "load.splashScreen": "ui/splashScreenVideo.json"
+}

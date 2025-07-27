@@ -1,0 +1,66 @@
+{
+  "imageContainer": [
+    { "file": "towners/animals/cow.cel" },
+    { "file": "towners/strytell/strytell.cel" },
+    { "file": "towners/butch/deadguy.cel" },
+    { "file": "towners/healer/healer.cel" },
+    { "file": "towners/twnf/twnfn.cel" },
+    { "file": "towners/smith/smithn.cel" },
+    { "file": "towners/townboy/pegkid1.cel" },
+    { "file": "towners/drunk/twndrunk.cel" },
+    { "file": "towners/townwmn1/witch.cel" },
+    { "file": "towners/townwmn1/wmnn.cel" }
+  ],
+  "texturePack": [
+    {
+      "id": "cow",
+      "imageContainer": "cow",
+      "palette": "town"
+    },
+    {
+      "id": "strytell",
+      "imageContainer": "strytell",
+      "palette": "town"
+    },
+    {
+      "id": "deadguy",
+      "imageContainer": "deadguy",
+      "palette": "town"
+    },
+    {
+      "id": "healer",
+      "imageContainer": "healer",
+      "palette": "town"
+    },
+    {
+      "id": "twnfn",
+      "imageContainer": "twnfn",
+      "palette": "town"
+    },
+    {
+      "id": "smithn",
+      "imageContainer": "smithn",
+      "palette": "town"
+    },
+    {
+      "id": "pegkid1",
+      "imageContainer": "pegkid1",
+      "palette": "town"
+    },
+    {
+      "id": "twndrunk",
+      "imageContainer": "twndrunk",
+      "palette": "town"
+    },
+    {
+      "id": "witch",
+      "imageContainer": "witch",
+      "palette": "town"
+    },
+    {
+      "id": "wmnn",
+      "imageContainer": "wmnn",
+      "palette": "town"
+    }
+  ]
+}

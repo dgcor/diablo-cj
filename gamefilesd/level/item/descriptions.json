@@ -1,0 +1,277 @@
+{
+  "classifier": [
+    {
+      "id": "armor",
+      "values": [
+        {
+          "property": "indestructible",
+          "value": { "min": true, "max": true, "value": "Armor: %armor%  Indestructible" }
+        },
+        { "value": { "value": "Armor: %armor%  Dur: %durability%/%durabilityMax%" } }
+      ]
+    },
+    {
+      "id": "charges",
+      "values": {
+        "property": "chargesMax",
+        "value": { "min": 1, "value": "Charges: %charges%/%chargesMax%" }
+      }
+    },
+    {
+      "id": "indestructible",
+      "values": "Indestructible"
+    },
+    {
+      "id": "magic",
+      "values": [
+        {
+          "property": "identified",
+          "value": { "min": false, "max": false, "value": "Not Identified" }
+        },
+        {
+          "property": "identified",
+          "value": { "min": false, "max": false, "value": "" }
+        },
+        {
+          "property": "magical",
+          "value": { "min": false, "max": false, "value": "" }
+        },
+        {
+          "property": "resistAll",
+          "value": [
+            { "min": "min", "max": -1, "value": "Resist All : %resistAll%%" },
+            { "min": 1, "max": "max", "value": "Resist All : +%resistAll%%" }
+          ]
+        },
+        {
+          "property": "resistMagic",
+          "value": [
+            { "min": "min", "max": -1, "value": "Resist Magic : %resistMagic%%" },
+            { "min": 1, "max": "max", "value": "Resist Magic : +%resistMagic%%" }
+          ]
+        },
+        {
+          "property": "resistFire",
+          "value": [
+            { "min": "min", "max": -1, "value": "Resist Fire : %resistFire%%" },
+            { "min": 1, "max": "max", "value": "Resist Fire : +%resistFire%%" }
+          ]
+        },
+        {
+          "property": "resistLightning",
+          "value": [
+            { "min": "min", "max": -1, "value": "Resist Lightning : %resistLightning%%" },
+            { "min": 1, "max": "max", "value": "Resist Lightning : +%resistLightning%%" }
+          ]
+        },
+        {
+          "property": "toDamage",
+          "value": [
+            { "min": "min", "max": -1, "value": "%toDamage%% to Damage" },
+            { "min": 1, "max": "max", "value": "+%toDamage%% to Damage" }
+          ]
+        },
+        {
+          "property": "toHit",
+          "value": [
+            { "min": "min", "max": -1, "value": "Chance to Hit : %toHit%%" },
+            { "min": 1, "max": "max", "value": "Chance to Hit : +%toHit%%" }
+          ]
+        },
+        {
+          "property": "toLightRadius",
+          "value": [
+            { "min": "min", "max": -1, "value": "%toLightRadius%% to Light Radius" },
+            { "min": 1, "max": "max", "value": "+%toLightRadius%% to Light Radius" }
+          ]
+        },
+        {
+          "property": "toArmor",
+          "value": [
+            { "min": "min", "max": -1, "value": "%toArmor%% Armor" },
+            { "min": 1, "max": "max", "value": "+%toArmor%% Armor" }
+          ]
+        },
+        {
+          "property": "life",
+          "value": [
+            { "min": "min", "max": -1, "value": "Hit Points : %life%" },
+            { "min": 1, "max": "max", "value": "Hit Points : +%life%" }
+          ]
+        },
+        {
+          "property": "mana",
+          "value": [
+            { "min": "min", "max": -1, "value": "Mana : %mana%" },
+            { "min": 1, "max": "max", "value": "Mana : +%mana%" }
+          ]
+        },
+        {
+          "property": "damage",
+          "value": [
+            { "min": "min", "max": -2, "value": "Removes %damage% Points from Damage" },
+            { "min": -1, "max": -1, "value": "Removes %damage% Point from Damage" },
+            { "min": 1, "max": 1, "value": "Adds %damage% Point to Damage" },
+            { "min": 2, "max": "max", "value": "Adds %damage% Points to Damage" }
+          ]
+        },
+        {
+          "property": "allAttributes",
+          "value": [
+            { "min": "min", "max": -1, "value": "%allAttributes% to All Attributes" },
+            { "min": 1, "max": "max", "value": "+%allAttributes% to All Attributes" }
+          ]
+        },
+        {
+          "property": "strength",
+          "value": [
+            { "min": "min", "max": -1, "value": "%strength% to Strength" },
+            { "min": 1, "max": "max", "value": "+%strength% to Strength" }
+          ]
+        },
+        {
+          "property": "magic",
+          "value": [
+            { "min": "min", "max": -1, "value": "%magic% to Magic" },
+            { "min": 1, "max": "max", "value": "+%magic% to Magic" }
+          ]
+        },
+        {
+          "property": "dexterity",
+          "value": [
+            { "min": "min", "max": -1, "value": "%dexterity% to Dexterity" },
+            { "min": 1, "max": "max", "value": "+%dexterity% to Dexterity" }
+          ]
+        },
+        {
+          "property": "vitality",
+          "value": [
+            { "min": "min", "max": -1, "value": "%vitality% to Vitality" },
+            { "min": 1, "max": "max", "value": "+%vitality% to Vitality" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noAttributes",
+      "values": "No Required Attributes"
+    },
+    {
+      "id": "potionOfHealing",
+      "values": "Recover Life"
+    },
+    {
+      "id": "potionOfMana",
+      "values": "Recover Mana"
+    },
+    {
+      "id": "potionOfFullHealing",
+      "values": "Fully Recover Life"
+    },
+    {
+      "id": "potionOfFullMana",
+      "values": "Fully Recover Mana"
+    },
+    {
+      "id": "potionOfRejuvenation",
+      "values": "Recover Life And Mana"
+    },
+    {
+      "id": "potionOfFullRejuvenation",
+      "values": "Fully Recover Life And Mana"
+    },
+    {
+      "id": "required",
+      "values": [
+        {
+          "property": "requiredStrength",
+          "value": { "min": 1, "value": "Required: %requiredStrength% Str" }
+        },
+        {
+          "property": "requiredMagic",
+          "value": { "min": 1, "value": "Required: %requiredMagic% Mag" }
+        },
+        {
+          "property": "requiredDexterity",
+          "value": { "min": 1, "value": "Required: %requiredDexterity% Dex" }
+        },
+        {
+          "property": "requiredVitality",
+          "value": { "min": 1, "value": "Required: %requiredVitality% Vit" }
+        }
+      ]
+    },
+    {
+      "id": "requiredBook1",
+      "values": "Required: %currentLevel.currentPlayer.spell.%spell.id%.requiredMagic% Mag"
+    },
+    {
+      "id": "requiredBook2",
+      "values": "Required: %currentLevel.spell.%spell.id%.requiredMagic% Mag"
+    },
+    {
+      "id": "requiredStrDex",
+      "values": [
+        {
+          "property": "requiredStrength",
+          "value": { "min": 0, "max": 0, "value": "Required: %requiredDexterity% Dex" }
+        },
+        {
+          "property": "requiredDexterity",
+          "value": { "min": 1, "value": "Required: %requiredStrength% Str %requiredDexterity% Dex" }
+        },
+        {
+          "property": "requiredStrength",
+          "value": { "min": 1, "value": "Required: %requiredStrength% Str" }
+        }
+      ]
+    },
+    {
+      "id": "requiredStrMag",
+      "values": [
+        {
+          "property": "requiredStrength",
+          "value": { "min": 0, "max": 0, "value": "Required: %requiredMagic% Mag" }
+        },
+        {
+          "property": "requiredMagic",
+          "value": { "min": 1, "value": "Required: %requiredStrength% Str %requiredMagic% Mag" }
+        },
+        {
+          "property": "requiredStrength",
+          "value": { "min": 1, "value": "Required: %requiredStrength% Str" }
+        }
+      ]
+    },
+    {
+      "id": "rightClickToRead",
+      "values": "Right Click to Read"
+    },
+    {
+      "id": "rightClickToRead2",
+      "values": "Right-Click to Read"
+    },
+    {
+      "id": "rightClickToRead3",
+      "values": "Right-Click to Read, then\nLeft-Click to Target"
+    },
+    {
+      "id": "rightClickToUse",
+      "values": "Right Click to Use"
+    },
+    {
+      "id": "rightClickToView",
+      "values": "Right Click to View"
+    },
+    {
+      "id": "weapon",
+      "values": [
+        {
+          "property": "indestructible",
+          "value": { "min": true, "max": true, "value": "Damage: %damageMin%-%damageMax%  Indestructible" }
+        },
+        { "value": { "value": "Damage: %damageMin%-%damageMax%  Dur: %durability%/%durabilityMax%" } }
+      ]
+    }
+  ]
+}

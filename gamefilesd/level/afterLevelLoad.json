@@ -1,0 +1,35 @@
+{
+  "action": [
+    {
+      "name": "if.notEqual",
+      "param1": "%currentLevel.path%",
+      "param2": "town",
+      "then": { "name": "player.setRestStatus", "status": 1 },
+      "else": { "name": "player.setRestStatus", "status": 0 }
+    },
+    "updateAllPlayerStats",
+    "updatePlayerTexture",
+    "updatePlayerSpeed",
+    "updateMap",
+    {
+      "name": "if.equal",
+      "param1": "%questPanel.visible%",
+      "param2": true,
+      "then": { "name": "load", "file": "ui/level/char/panelQuests.json" }
+    },
+    {
+      "name": "if.notEqual",
+      "param1": "{1}",
+      "param2": "",
+      "then": { "name": "load", "file": ["level/positionPlayer.json", "{1}"] }
+    },
+    {
+      "name": "if.equal",
+      "param1": "%game.musicVolume%",
+      "param2": 0,
+      "then": { "name": "audio.stop", "id": "main" },
+      "else": { "name": "audio.play", "id": "main" }
+    },
+    { "name": "drawable.visible", "id": "txtZoom", "visible": false }
+  ]
+}

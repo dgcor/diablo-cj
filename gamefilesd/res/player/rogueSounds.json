@@ -1,0 +1,12 @@
+{
+  "sound": [
+    { "id": "cantUseThisYet", "file": "sfx/rogue/rogue13.wav" },
+    { "id": "cantCarryAnymore", "file": "sfx/rogue/rogue14.wav" },
+    { "id": "haveNoRoom", "file": "sfx/rogue/rogue15.wav" },
+    { "id": "whereWouldIPutThis", "file": "sfx/rogue/rogue16.wav" },
+    { "id": "cantCastThatHere", "file": "sfx/rogue/rogue27.wav" },
+    { "id": "dontHaveASpellReady", "file": "sfx/rogue/rogue34.wav" },
+    { "id": "notEnoughMana", "file": "sfx/rogue/rogue35.wav" },
+    { "id": "die", "file": "sfx/rogue/rogue71.wav" }
+  ]
+}

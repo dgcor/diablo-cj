@@ -1,0 +1,76 @@
+{
+  "spell": [
+    {
+      "id": "identify",
+      "texturePack1": "spelli2",
+      "texturePack2": "spelicon",
+      "textureIndex1": 4,
+      "textureIndex2": 4,
+      "name": "Identify",
+      "type": "Skill",
+      "descriptions": { "index": 0, "name": "spellType" },
+      "properties": {
+        "damageMin": 2,
+        "damageMax": 10,
+        "useInTown": true
+      }
+    },
+    {
+      "id": "itemRepair",
+      "fromId": "identify",
+      "textureIndex1": 25,
+      "textureIndex2": 25,
+      "name": "Item Repair",
+      "properties": {
+        "damageMin": 2,
+        "damageMax": 10
+      }
+    },
+    {
+      "id": "rage",
+      "fromId": "identify",
+      "textureIndex1": 22,
+      "textureIndex2": 22,
+      "name": "Rage",
+      "properties": {
+        "damageMin": 2,
+        "damageMax": 10
+      }
+    },
+    {
+      "id": "search",
+      "fromId": "identify",
+      "textureIndex1": 8,
+      "textureIndex2": 8,
+      "name": "Search",
+      "properties": {
+        "damageMin": 2,
+        "damageMax": 10
+      }
+    },
+    {
+      "id": "staffRecharge",
+      "fromId": "identify",
+      "textureIndex1": 28,
+      "textureIndex2": 28,
+      "name": "Staff Recharge",
+      "properties": {
+        "price": 150,
+        "damageMin": 2,
+        "damageMax": 10
+      }
+    },
+    {
+      "id": "trapDisarm",
+      "fromId": "identify",
+      "textureIndex1": 36,
+      "textureIndex2": 36,
+      "name": "Trap Disarm",
+      "properties": {
+        "price": 150,
+        "damageMin": 2,
+        "damageMax": 10
+      }
+    }
+  ]
+}
