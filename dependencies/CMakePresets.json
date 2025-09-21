@@ -48,9 +48,11 @@
         "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/",
         "CMAKE_C_COMPILER": "gcc",
         "CMAKE_CXX_COMPILER": "g++",
-        "CMAKE_CXX_FLAGS": "-static -s",
-        "STORM_USE_BUNDLED_LIBRARIES": true,
-        "VCPKG_TARGET_TRIPLET": "x64-mingw-static"
+        "CMAKE_TOOLCHAIN_FILE": {
+          "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+          "type": "FILEPATH"
+        },
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic"
       },
       "condition": {
         "type": "equals",

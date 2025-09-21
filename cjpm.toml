@@ -6,8 +6,8 @@
   target-dir = ""
   src-dir = ""
   output-type = "executable"
-  compile-option = "--cfg . --dy-std --dy-libs -Woff unused"
-  override-compile-option = "--dy-std --dy-libs"
+  compile-option = "--cfg . --dy-std -Woff unused"
+  override-compile-option = "--dy-std"
   link-option = ""
   package-configuration = {}
 
