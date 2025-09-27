@@ -6,8 +6,8 @@
   target-dir = ""
   src-dir = ""
   output-type = "executable"
-  compile-option = "--cfg . --disable-reflection --static-std -O2 -Woff unused"
-  override-compile-option = "--disable-reflection --static-std -O2"
+  compile-option = "--cfg . --disable-reflection --static-std -O1 -Woff unused"
+  override-compile-option = "--disable-reflection --static-std -O1"
   link-option = "-s"
   package-configuration = {}
 
